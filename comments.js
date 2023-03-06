@@ -138,7 +138,7 @@ function fundingEvent(parsed, profile, ev) {
                 tr.appendChild(amountRow)
                 let proof = makeTd()
                 let link = document.createElement("a")
-                link.href = "https://nostr.band/" + window.NostrTools.nip19.noteEncode(ev.id)
+                link.href = "https://snort.social/e/" + window.NostrTools.nip19.noteEncode(ev.id)
                 link.innerText = "proof"
                 proof.appendChild(link)
                 tr.appendChild(proof)

@@ -43,7 +43,7 @@
     <section id="main_content">
         <div id="summary"></div>
         <script>
-            fetch('/mutexes.md')
+            fetch('/faq.md')
             .then(response => response.text())
             .then((data) => {
                 document.getElementById("summary").replaceChildren(makeItHTML(data))

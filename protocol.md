@@ -59,8 +59,8 @@ This is not the protocol, but this is the general idea of what to codify into a 
 2. The project creator refines the problem statement into a very simple mission statement. 
     * A software project is the codification of the values of a group of people. The mission statement is the stated reason for the group to exist.
     * Some good mission statement examples: 
-      * *Reddit: the front page of the Internet*
-      * *Wikipedia: the free encyclopedia that anyone can edit*
+        * *Reddit: the front page of the Internet*
+        * *Wikipedia: the free encyclopedia that anyone can edit*
 3. Anyone who's not already a *Participant* in the project MAY become a Participant by being validated by any existing Participant. This results in a *tree of Participants* starting with the project creator.
 4. The project creator SHOULD produce a minimal solution in less than 6 weeks. This is to test the assumption that there are people who care enough about the problem to use the solution.
     * Participants MAY contribute to building this minimal solution by sending patches.
@@ -77,13 +77,13 @@ This is not the protocol, but this is the general idea of what to codify into a 
     * this is a way for a Participant to tell other Participants how much time/effort they spent in solving the problem
     * the participant submitting the expense decides how much their pull request is worth, and everyone else decides if they are full of shit or not.
 8. Participants with *Votepower* MAY vote to approve or reject an Expense.
-     * The Expense SHOULD be rejected unless it's along the route (or *critical path*) to more users or revenue for the project.
-      * Votepower is a measure of a participant's *skin in the game* or how committed they are to the project.
-      * `Votepower = Shares * Leadtime`
-          * Every Participant's `Leadtime` starts at `0`.
-          * A Participant's Shares *cannot* be spent/transferred if their `Leadtime > 0`.
-          * A Participant MAY increase or decrease their Leadtime by `1` every 2,016 blocks (but can't become negative)
-          * If more than 50% of the project's Votepower approves an Expense, and less than 5% reject it, its Approved.
+    * The Expense SHOULD be rejected unless it's along the route (or *critical path*) to more users or revenue for the project.
+    * Votepower is a measure of a participant's *skin in the game* or how committed they are to the project.
+        * `Votepower = Shares * Leadtime`
+        * Every Participant's `Leadtime` starts at `0`.
+        * A Participant's Shares *cannot* be spent/transferred if their `Leadtime > 0`.
+        * A Participant MAY increase or decrease their Leadtime by `1` every 2,016 blocks (but can't become negative)
+        * If more than 50% of the project's Votepower approves an Expense, and less than 5% reject it, its Approved.
 9. If an Expense is *Approved* new [Shares](#) in the project are created and they belong to the Participant who claimed the Expense
      * Shares are created 1:1 per Satoshi claimed in the Expense
      * All revenue that the project generates goes straight to Shareholders (Nostrocket is non-custodial)
