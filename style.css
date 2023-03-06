@@ -14,6 +14,7 @@ body {
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
+    position: relative;
 }
 
 section {
@@ -251,7 +252,9 @@ a {
 }
 
 #header_image {
-    display: flex;
+    display: block;
+    position: relative;
+    z-index: 11;
     width: 100%;
     aspect-ratio: 17/8;
     //height: ;
@@ -259,6 +262,20 @@ a {
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.spares{
+
+}
+
+.headbox {
+    position: relative;
+    top:0;
+    left:0;
+    z-index: 10;
+    width: 100%;
+    aspect-ratio: 17/8;
+}
+
 @media (max-width: 800px) {
     .images-center {
         width: 70%;
@@ -271,11 +288,34 @@ a {
         aspect-ratio: 20/8;
         background-image: url("/images/nostrocket_small.png");
     }
+    .headbox {
+        border-color: #aa759f;
+        aspect-ratio: 12/4;
+    }
+}
+
+@media (max-width: 560px) {
+    .headbox {
+        border-color: #aa759f;
+        aspect-ratio: 16/8;
+    }
 }
 
 @media (max-width: 500px) {
-    .images-center {
+    .images-center{
         width: 100%;
 
     }
+}
+
+.head_image {
+
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 12;
 }

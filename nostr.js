@@ -7,7 +7,7 @@ function insert_event_sorted(evs, new_ev) {
             return false
         }
 
-        if (new_ev.created_at > ev.created_at) {
+        if (new_ev.created_at < ev.created_at) {
             evs.splice(i, 0, new_ev)
             return true
         }
@@ -16,6 +16,7 @@ function insert_event_sorted(evs, new_ev) {
     evs.push(new_ev)
     return true
 }
+
 
 function Relay(relay, opts={})
 {

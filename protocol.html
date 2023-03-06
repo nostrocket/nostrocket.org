@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#151515">
+    <meta name="msapplication-navbutton-color" content="#151515">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Nostrocket! | a hyper-efficient rocket booster for your project</title>
+    <meta property="og:title" content="Nostrocket!"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta name="description" content="a hyper-efficient rocket booster for your project"/>
+    <meta property="og:description" content="a hyper-efficient rocket booster for your project"/>
+    <link rel="canonical" href="https://nostrocket.org/"/>
+    <meta property="og:url" content="https://nostrocket.org/"/>
+    <meta property="og:site_name" content="Nostrocket!"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta property="twitter:title" content="Nostrocket!"/>
+    <link rel="stylesheet" href="comments.css">
+    <script src="showdown.min.js"></script>
+    <script src="markdown.js"></script>
+    <script src="bitcoinjs-lib.js"></script>
+    <script src="bitcoinjs-message.js"></script>
+    <script src="verifyBitcoinSignedMessage.js"></script>
+    <script src="https://unpkg.com/nostr-tools/lib/nostr.bundle.js"></script>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <div class="container-lg px-3 my-5 markdown-body">
+            <p align="center">
+                <a href="/index.html" id="header_image"></a>
+            </p></div>
+    </div>
+</header>
+
+<div class="container" id="contents">
+    <section id="main_content">
+        <div id="summary"></div>
+        <script>
+            fetch('/protocol.md')
+            .then(response => response.text())
+            .then((data) => {
+                document.getElementById("summary").replaceChildren(makeItHTML(data))
+            })</script>
+
+    </section>
+    <div id="comments">
+    </div>
+    <script src="nostr.js"></script>
+    <script src="comments.js"></script>
+    <script>
+        //thank you JB55 https://damus.io/log/2022-08-02-introducing-damus-log.html
+        let relay = comments_init("92cedde38af145f0ec83276b0aa1dcfce6f11836a7bb0073156e270e5161831d")
+    </script>
+</div>
+</body>
+</html>

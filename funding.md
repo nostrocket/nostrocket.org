@@ -38,7 +38,7 @@ You will then be presented with:
    - Send it.
 
 ### What happens next?
-Nostrocket will automagically verify the signature, check the balance of your Bitcoin address, add you to the funding queue.
+Nostrocket will automagically verify the signature, check the balance of your Bitcoin address, and append you to the funding queue.
 
 The order of this queue matters. Nostrocket projects will offer investment in the queue order. For example, only when the first person in the queue has failed to produce a transaction in time or their pledged amount has been spent will the second person in the queue be able to provide funding.
 

@@ -101,6 +101,9 @@ function render_event(model, ev) {
 
 var funders = -1
 var addresses = new Map;
+var totalFunding = 0
+
+
 
 function fundingEvent(parsed, profile, ev) {
     try {
@@ -115,11 +118,21 @@ function fundingEvent(parsed, profile, ev) {
                 let amountRow = makeTd("Fetching amount....")
                 getBalance(parsed[0]).then(result => {
                     if(result) {
-                        amountRow.innerText = result.toLocaleString()+" sats"
+                        amountRow.innerText = result.toLocaleString()+ " sats";
+                        totalFunding += result
+                        if (document.getElementById("total_funding_row")) {
+                            document.getElementById("total_funding_row").remove()
+                        }
+                        let tr_total = document.createElement("tr")
+                        tr_total.id = "total_funding_row"
+                        tr_total.append(makeTd(), makeTd("TOTAL:"), makeTd(totalFunding.toLocaleString()+ " sats"))
+                        t.appendChild(tr_total)
                     }
                     if (!result) {
-                        document.getElementById("table_row_"+ev.id).remove()
-                        funders--
+                        if (result === 0) {
+                            document.getElementById("table_row_"+ev.id).remove()
+                            funders--
+                        }
                     }
                 })
                 tr.appendChild(amountRow)
@@ -131,6 +144,7 @@ function fundingEvent(parsed, profile, ev) {
                 tr.appendChild(proof)
                 if (funders < 0) {
                     t.replaceChildren(tr)
+
                 } else {
                     t.appendChild(tr)
                 }

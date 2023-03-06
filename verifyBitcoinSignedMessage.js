@@ -22,17 +22,44 @@ function verifyBitcoinSignedEvent(npub, btcAddress, sig) {
     return bitcoin.verify(npub, btcAddress, sig)
 }
 
+
+
 async function getBalance(address) {
     p = new Promise((resolve, reject) => {
+        fetchBalance(address, 0).then(result => {
+            if (result !== "failed") {
+                resolve(result)
+            } else {
+                fetchBalance(address, 1).then(result => {
+                    if (result !== "failed") {
+                        resolve(result)
+                    } else {
+                        resolve(false)
+                    }
+                })
+            }
+        })
+    })
+    return p
+}
+
+async function fetchBalance(address, service) {
+    p = new Promise((resolve, reject) => {
         let request = new XMLHttpRequest()
-        request.open("GET", "https://api.blockcypher.com/v1/btc/main/addrs/" + address+"/balance");
+        if (service === 0) {
+            request.open("GET", "https://api.blockcypher.com/v1/btc/main/addrs/" + address+"/balance");
+        }
+        if (service === 1) {
+            request.open("GET", "https://blockchain.info/rawaddr/" + address);
+        }
         request.send();
+        request.onerror = function () {resolve("failed")}
         request.onload = () => {
             if (request.status === 200) {
                 data = JSON.parse(request.response)
                 resolve(Number(data["final_balance"]))
             } else {
-                resolve(false)
+                resolve("failed")
             }
         }
 

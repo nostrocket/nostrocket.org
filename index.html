@@ -26,16 +26,43 @@
     <script src="bitcoinjs-message.js"></script>
     <script src="verifyBitcoinSignedMessage.js"></script>
     <script src="https://unpkg.com/nostr-tools/lib/nostr.bundle.js"></script>
+    <link rel="stylesheet" href="clock.css">
+
 </head>
 
 <body>
 
 <header>
     <div class="container">
+        <div class="headbox">
         <div class="container-lg px-3 my-5 markdown-body">
+
             <p align="center">
                 <a href="/index.html" id="header_image"></a>
             </p></div>
+        <div class="overlay">
+            <div class="images-center">
+                <div id="clockdiv">
+                    <div>
+                        <span class="days"></span>
+                        <div class="smalltext">Days</div>
+                    </div>
+                    <div>
+                        <span class="hours"></span>
+                        <div class="smalltext">Hours</div>
+                    </div>
+                    <div>
+                        <span class="minutes"></span>
+                        <div class="smalltext">Mins</div>
+                    </div>
+                    <div>
+                        <span class="seconds"></span>
+                        <div class="smalltext">Secs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
 </header>
 
@@ -96,6 +123,7 @@
         let relay = comments_init("8e763d70ff415930bf109f74e7a981287fe8630f7389c25eae40e4f9a7391e7a")
     </script>
 
+    <script src="countdown.js"></script>
 </div>
 </body>
 </html>
