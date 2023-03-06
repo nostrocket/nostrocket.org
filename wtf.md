@@ -1,11 +1,11 @@
-As a [**project creator**](#), Nostrocket makes it easy for you to bring your project or idea forward to a stage where you can quit your job and focus on what really matters (despite your lack of funding).
+As a [**project creator**](/protocol.html), Nostrocket makes it easy for you to bring your project or idea forward to a stage where you can quit your job and focus on what really matters (despite your lack of funding).
 
-As a [**developer**](#), Nostrocket means you get paid to work on awesome projects solving real problems.
+As a [**developer**](/protocol.html), Nostrocket means you get paid to work on awesome projects solving real problems.
 - You can work on Nostrocket projects no matter how much or how little experience you have.
 - Payments for your work are made with every pull request you send. You can choose to be paid in Sats or get a stake in the project's revenue.
 - Nostrocket can only reach its full potential if everyone involved reaches theirs. Nostrocket helps you become more competent, by providing you with an opportunity to make meaningful and valuable contributions at your own [zone of proximal development](https://en.wikipedia.org/wiki/Zone_of_proximal_development) and learn from others who know something you don't.
 
-As an [**investor**](#), the Nostrocket process is a game-changer.
+As an [**investor**](/funding.html), the Nostrocket process is a game-changer.
 - Nostrocket projects do not require a middle man between your investment and the developers writing code.
 - Nostrocket makes it dead simple to invest in the absolute most cutting edge projects building with Bitcoin, Lightning, and Nostr.
 - Every Nostrocket project is solving a *real* and *valuable* problem.
