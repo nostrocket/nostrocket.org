@@ -15,7 +15,7 @@ Nostrocket will see this event and add you to the funding queue.
 
 ### How do I do this?
 
-Most Bitcoin wallets support producing BIP-322 signed message. This proves that you own a certain Bitcoin address.
+Most Bitcoin wallets support producing BIP-322 signed messages. This proves that you own a certain Bitcoin address.
 
 If your wallet does not support this, I don't know what to tell you.
 
@@ -32,13 +32,13 @@ You will then be presented with:
 #### Step 2
 1. Open [this event](#) in your favorite Nostr client
 2. Reply to the event: 
-   1. paste in your Bitcoin address. 
-   2. Press enter for a new line. 
-   3. Paste in the signature.
-   4. Send it.
+   - paste in your Bitcoin address. 
+   - Press enter for a new line. 
+   - Paste in the signature.
+   - Send it.
 
 ### What happens next?
 Nostrocket will automagically verify the signature, check the balance of your Bitcoin address, add you to the funding queue.
 
-The order of this queue matters. Nostrocket projects will offer investment in the queue order. For example, only when the first person in the queue has failed to produce a transaction in time or their pledged amount has been spent will the second person in the queue be able to invest.
+The order of this queue matters. Nostrocket projects will offer investment in the queue order. For example, only when the first person in the queue has failed to produce a transaction in time or their pledged amount has been spent will the second person in the queue be able to provide funding.
 
