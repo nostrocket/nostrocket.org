@@ -74,57 +74,17 @@ function render_events(model) {
     return model.events.map(render).join("\n")
 }
 
-var funders = -1
-var addresses = new Map;
-
 function render_event(model, ev) {
-    let parsed = verifyBitcoinAddress(ev)
     const profile = model.profiles[ev.pubkey] || {
         name: "anon",
         display_name: "Anonymous",
     }
+    let parsed = verifyBitcoinAddress(ev)
     if(parsed) {
-       try {
-           if(verifyBitcoinSignedEvent(window.NostrTools.nip19.npubEncode(ev.pubkey), parsed[0], parsed[1])) {
-               if (!addresses.get(parsed[0])) {
-                   addresses.set(parsed[0], true)
-                   let t = document.getElementById("funders")
-                   let tr = document.createElement("tr")
-                   tr.id = "table_row_"+ev.id
-                   console.log(funders)
-                   tr.appendChild(makeTd(funders+1))
-                   console.log(funders)
-                   tr.appendChild(makeTd(sanitize(get_name(ev.pubkey, profile))))
-                   let amountRow = makeTd("Fetching amount....")
-                   getBalance(parsed[0]).then(result => {
-                       if(result) {
-                           console.log(result)
-                           amountRow.innerText = result.toLocaleString()+" sats"
-                       }
-                       if (!result) {
-                           document.getElementById("table_row_"+ev.id).remove()
-                           funders--
-                       }
-                   })
-                   tr.appendChild(amountRow)
-                   let proof = makeTd()
-                   let link = document.createElement("a")
-                   link.href = "https://nostr.band/" + window.NostrTools.nip19.noteEncode(ev.id)
-                   link.innerText = "proof"
-                   proof.appendChild(link)
-                   tr.appendChild(proof)
-                   if (funders < 0) {
-                       t.replaceChildren(tr)
-                   } else {
-                       t.appendChild(tr)
-                   }
-                   funders++
-               }
-           }
-       } catch (e) {}
-    }
-    const delta = time_delta(new Date().getTime(), ev.created_at*1000)
-    return `
+        fundingEvent(parsed, profile, ev)
+    } else {
+        const delta = time_delta(new Date().getTime(), ev.created_at*1000)
+        return `
 	<div class="comment">
 		<div class="info">
 		    <div class="username">${sanitize(get_name(ev.pubkey, profile))}</div>
@@ -136,6 +96,48 @@ function render_event(model, ev) {
 		</p>
 	</div>
 	`
+    }
+}
+
+var funders = -1
+var addresses = new Map;
+
+function fundingEvent(parsed, profile, ev) {
+    try {
+        if(verifyBitcoinSignedEvent(window.NostrTools.nip19.npubEncode(ev.pubkey), parsed[0], parsed[1])) {
+            if (!addresses.get(parsed[0])) {
+                addresses.set(parsed[0], true)
+                let t = document.getElementById("funders")
+                let tr = document.createElement("tr")
+                tr.id = "table_row_"+ev.id
+                tr.appendChild(makeTd(funders+1))
+                tr.appendChild(makeTd(sanitize(get_name(ev.pubkey, profile))))
+                let amountRow = makeTd("Fetching amount....")
+                getBalance(parsed[0]).then(result => {
+                    if(result) {
+                        amountRow.innerText = result.toLocaleString()+" sats"
+                    }
+                    if (!result) {
+                        document.getElementById("table_row_"+ev.id).remove()
+                        funders--
+                    }
+                })
+                tr.appendChild(amountRow)
+                let proof = makeTd()
+                let link = document.createElement("a")
+                link.href = "https://nostr.band/" + window.NostrTools.nip19.noteEncode(ev.id)
+                link.innerText = "proof"
+                proof.appendChild(link)
+                tr.appendChild(proof)
+                if (funders < 0) {
+                    t.replaceChildren(tr)
+                } else {
+                    t.appendChild(tr)
+                }
+                funders++
+            }
+        }
+    } catch (e) {}
 }
 
 function makeTd(inner) {
