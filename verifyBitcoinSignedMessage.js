@@ -25,7 +25,7 @@ function verifyBitcoinSignedEvent(npub, btcAddress, sig) {
 async function getBalance(address) {
     p = new Promise((resolve, reject) => {
         let request = new XMLHttpRequest()
-        request.open("GET", "https://blockchain.info/rawaddr/" + address);
+        request.open("GET", "https://blockchain.info/rawaddr/" + address+"&cors=true");
         request.send();
         request.onload = () => {
             if (request.status === 200) {
