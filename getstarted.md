@@ -1,2 +1,2 @@
 ## Get Started Now
-Comment on [this event](#) to receive a DM when Nostrocket is ready for blast off (probably around the end of Nostrica).
+Comment on [this event](#) to receive a DM when Nostrocket is ready for blast off (probably around the end of Nostrica). You can also watch progress on [GitHub](https://github.com/nostrocket) for now until we replace it with a decentralized GitHub built with Nostrocket. 
