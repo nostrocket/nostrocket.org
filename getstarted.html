@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#151515">
+    <meta name="msapplication-navbutton-color" content="#151515">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Nostrocket! | a hyper-efficient rocket booster for your project</title>
+    <meta property="og:title" content="Nostrocket!"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta name="description" content="a hyper-efficient rocket booster for your project"/>
+    <meta property="og:description" content="a hyper-efficient rocket booster for your project"/>
+    <link rel="canonical" href="https://nostrocket.org/"/>
+    <meta property="og:url" content="https://nostrocket.org/"/>
+    <meta property="og:site_name" content="Nostrocket!"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta property="twitter:title" content="Nostrocket!"/>
+    <link rel="stylesheet" href="comments.css">
+    <script src="showdown.min.js"></script>
+    <script src="markdown.js"></script>
+    <script src="bitcoinjs-lib.js"></script>
+    <script src="bitcoinjs-message.js"></script>
+    <script src="verifyBitcoinSignedMessage.js"></script>
+    <script src="https://unpkg.com/nostr-tools/lib/nostr.bundle.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu&subset=cyrillic,latin' rel='stylesheet' type='text/css' />
+
+</head>
+
+<body>
+
+<header>
+    <div class="container-lg px-3 my-5 markdown-body">
+        <a href="/index.html" id="header_image"></a>
+        <p></p>
+    </div>
+</header>
+
+<div class="headlinks" style="background-color: rgb(2,10,42, 0.4);">
+    <div class="container">
+        <div id="l" class="images-center" style="width: 100%"></div>
+        <script>fetch('/links.md')
+            .then(response => response.text())
+            .then((data) => {
+                document.getElementById("l").replaceChildren(makeItHTML(data))
+            })</script>
+    </div>
+</div>
+
+<div class="container" id="contents">
+    <section id="main_content">
+        <div id="summary"></div>
+        <script>
+            fetch('/getstarted.md')
+            .then(response => response.text())
+            .then((data) => {
+                document.getElementById("summary").replaceChildren(makeItHTML(data))
+            })</script>
+
+    </section>
+    <div id="comments">
+    </div>
+    <script src="nostr.js"></script>
+    <script src="comments.js"></script>
+    <script>
+        //thank you JB55 https://damus.io/log/2022-08-02-introducing-damus-log.html
+        let relay = comments_init("503941a9939a4337d9aef7b92323c353441cb5ebe79f13fed77aeac615116354")
+    </script>
+</div>
+</body>
+</html>

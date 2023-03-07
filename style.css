@@ -293,6 +293,7 @@ a {
 }
 
 .headlinks {
+    font-size: 18px;
     position: absolute;
     width: 100%;
     top: 0px;
@@ -303,6 +304,7 @@ a {
 @media (max-width: 800px) {
     .headlinks {
         position: relative;
+        font-size: 14px;
     }
     .images-center {
         width: 70%;
