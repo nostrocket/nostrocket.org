@@ -60,54 +60,64 @@
     </div>
 </header>
 
-<div class="container" id="contents">
-    <section id="main_content">
-        <div id="summary"></div>
-        <script>
-            fetch('/summary.md')
-                .then(response => response.text())
-                .then((data) => {
-                    document.getElementById("summary").replaceChildren(makeItHTML(data))
-                })</script>
-        <div class="images-center">
-            <img src="images/rocket.png" style="width: 23%;margin-right: 2%"/><img src="images/equals.png" style="width: 12%;height:12%;margin-right: 3%;margin-top: auto;margin-bottom: auto;"/><img src="images/nostr.png" style="width: 23%;margin-right: 2%"/><img src="images/plus.png" style="width: 12%;height:12%;margin-right: 3%;margin-top: auto;margin-bottom: auto;"/><img src="images/btc.png" style="width: 23%;"/>
-        </div>
-        <div style="display: flex;justify-content: center;margin-bottom: 6%;color: #fa7a0b;">Built with Nostr and Bitcoin</div>
-        <h2 id="funding-queue">Funding Queue</h2>
-        <p>These people want to invest in Nostrocket projects and have produced a Bitcoin signed message to prove they
-            have the sats ready to go. <a href="/funding.html">Join the queue now</a>.</p>
-        <table>
-            <thead>
-            <tr>
-                <th style="text-align: left">#</th>
-                <th style="text-align: left">name</th>
-                <th style="text-align: left">amount</th>
-                <th style="text-align: left">proof</th>
-            </tr>
-            </thead>
-            <tbody id="funders">
-            <td>0</td>
-            <td>Fetching, please wait</td>
-            <td></td>
-            <td></td>
-            </tbody>
-        </table>
-        <hr/>
 
-        <div id="wtf"></div>
-        <script>fetch('/wtf.md')
-            .then(response => response.text())
-            .then((data) => {
-                document.getElementById("wtf").replaceChildren(makeItHTML(data))
-            })</script>
+<div style="background-color: rgb(22,0,64)"><div class="container">
+    <div id="w"></div>
+    <script>fetch('/summary.md')
+        .then(response => response.text())
+        .then((data) => {
+            document.getElementById("w").replaceChildren(makeItHTML(data))
+        })</script>
+    <div class="images-center">
+        <img src="images/rocket.png" style="width: 23%;margin-right: 2%"/><img src="images/equals.png" style="width: 12%;height:12%;margin-right: 3%;margin-top: auto;margin-bottom: auto;"/><img src="images/nostr.png" style="width: 23%;margin-right: 2%"/><img src="images/plus.png" style="width: 12%;height:12%;margin-right: 3%;margin-top: auto;margin-bottom: auto;"/><img src="images/btc.png" style="width: 23%;"/>
+    </div>
+    <div style="display: flex;justify-content: center;padding-bottom: 20px;color: #fa7a0b;">Built with Nostr and Bitcoin</div>
+</div></div>
 
-        <div id="getstarted"></div>
-        <script>fetch('/getstarted.md')
-            .then(response => response.text())
-            .then((data) => {
-                document.getElementById("getstarted").replaceChildren(makeItHTML(data))
-            })</script>
-    </section>
+
+<div style="background-color: rgb(76,0,112)"><div class="container">
+    <h2 id="funding-queue">Funding Queue</h2>
+    <p>These people want to invest in Nostrocket projects and have produced a Bitcoin signed message to <a href="#">prove</a> they
+        have the sats ready to go. <a href="/funding.html">Join the queue now</a>.</p>
+    <table>
+        <thead>
+        <tr>
+            <th style="text-align: left">#</th>
+            <th style="text-align: left">name</th>
+            <th style="text-align: left">amount</th>
+        </tr>
+        </thead>
+        <tbody id="funders">
+        <td>0</td>
+        <td>Fetching, please wait</td>
+        <td></td>
+        <td></td>
+        </tbody>
+    </table>
+</div></div>
+
+
+<div style="background-color: rgb(104,2,122)"><div class="container">
+    <div id="x"></div>
+    <script>fetch('/wtf.md')
+        .then(response => response.text())
+        .then((data) => {
+            document.getElementById("x").replaceChildren(makeItHTML(data))
+        })</script>
+</div></div>
+
+
+<div style="background-color: rgb(134,2,32)"><div class="container">
+    <div id="y"></div>
+    <script>fetch('/getstarted.md')
+        .then(response => response.text())
+        .then((data) => {
+            document.getElementById("y").replaceChildren(makeItHTML(data))
+        })</script>
+</div></div>
+
+
+<div style="background-color: rgb(134,2,32)"><div class="container">
     <div id="comments">
     </div>
     <script src="nostr.js"></script>
@@ -116,7 +126,8 @@
         //thank you JB55 https://damus.io/log/2022-08-02-introducing-damus-log.html
         let relay = comments_init("503941a9939a4337d9aef7b92323c353441cb5ebe79f13fed77aeac615116354")
     </script>
-    <script src="countdown.js"></script>
-</div>
+</div></div>
+
+<script src="countdown.js"></script>
 </body>
 </html>

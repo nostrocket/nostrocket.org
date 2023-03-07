@@ -1,16 +1,27 @@
 body {
     margin: 0;
     padding: 0;
-    background: #151515 url("/images/bkg.png") 0 0;
+    background-color: rgb(42, 14, 59);
     color: #eaeaea;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     font-family: 'Ubuntu', sans-serif;
 }
 
-/* General & 'Reset' Stuff Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;*/
 
+/* General & 'Reset' Stuff Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;*/
+.markdown {
+    overflow: hidden;
+}
 .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.text_container {
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
@@ -255,7 +266,7 @@ a {
     position: relative;
     z-index: 11;
     width: 100%;
-    aspect-ratio: 29/10;
+    aspect-ratio: 1393/484;
     //height: ;
     background-image: url("/images/nostrocket_wide.png");
     background-size: contain;

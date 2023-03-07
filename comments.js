@@ -114,7 +114,13 @@ function fundingEvent(parsed, profile, ev) {
                 let tr = document.createElement("tr")
                 tr.id = "table_row_"+ev.id
                 tr.appendChild(makeTd(funders+1))
-                tr.appendChild(makeTd(sanitize(get_name(ev.pubkey, profile))))
+                let name = sanitize(get_name(ev.pubkey, profile))
+                let link = document.createElement("a")
+                link.href = "https://snort.social/e/" + window.NostrTools.nip19.noteEncode(ev.id)
+                link.innerText = name
+                let name_proof = makeTd()
+                name_proof.appendChild(link)
+                tr.appendChild(name_proof)
                 let amountRow = makeTd("Fetching amount....")
                 getBalance(parsed[0]).then(result => {
                     if(result) {
@@ -136,12 +142,6 @@ function fundingEvent(parsed, profile, ev) {
                     }
                 })
                 tr.appendChild(amountRow)
-                let proof = makeTd()
-                let link = document.createElement("a")
-                link.href = "https://snort.social/e/" + window.NostrTools.nip19.noteEncode(ev.id)
-                link.innerText = "proof"
-                proof.appendChild(link)
-                tr.appendChild(proof)
                 if (funders < 0) {
                     t.replaceChildren(tr)
 
