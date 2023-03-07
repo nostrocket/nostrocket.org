@@ -1,7 +1,3 @@
-function testVerify() {
-    return bitcoin.verify('sadf', 'bc1q7recy2dwk6dd9vlerh6spedn0p67ttrcws234u', 'HxljWqtZomeYdbxjXjlifsRXGX6uy38gATiKWyM/ZThvXb8CHEFchuIY8e22bQmsE0bkend1CpOokVcqfZENQi8=', '', true)
-}
-
 function verifyBitcoinAddress(ev) {
     if (ev) {
         let splitted = ev.content.split(/\r?\n/)

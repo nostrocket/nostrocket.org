@@ -1,4 +1,4 @@
-### How to join the funding queue
+## How to join the funding queue
 TL;DR: reply to [this event](https://snort.social/e/note12qu5r2vnnfpn0kdw77ujxg7r2dzped0tu7038lkh0t4vv9g3vd2qjxr9c7) with a Bitcoin signed message of your Nostr npub in the following format:
 ```
 <Bitcoin Address>
@@ -13,13 +13,13 @@ H2+j9rl2D8TPws4icYtAhSuU9Xg+LsWTQIpVVX1FjG6mFOCIe5LjfFMcXFY06Qfkh/VHHmHs5p7xQTsT
 
 Nostrocket will see this event and add you to the funding queue.
 
-### How do I do this?
+## How do I do this?
 
 Most Bitcoin wallets support producing BIP-322 signed messages. This proves that you own a certain Bitcoin address.
 
 If your wallet does not support this, I don't know what to tell you.
 
-#### Step 1
+### Step 1
 Your wallet will ask you for the message (text) you want to sign. Copy and paste your *npub* into this text field, with no white spaces.
 
 Sign the message.
@@ -29,7 +29,7 @@ You will then be presented with:
 - your bitcoin address, 
 - and the signature.
 
-#### Step 2
+### Step 2
 1. Open [this event](https://snort.social/e/note12qu5r2vnnfpn0kdw77ujxg7r2dzped0tu7038lkh0t4vv9g3vd2qjxr9c7) in your favorite Nostr client
 2. Reply to the event: 
    - paste in your Bitcoin address. 
@@ -37,12 +37,15 @@ You will then be presented with:
    - Paste in the signature.
    - Send it.
 
-### What happens next?
+## How do I verify a funding commitment?
+Read [this](/verify.html).
+
+## What happens next?
 Nostrocket will automagically verify the signature, check the balance of your Bitcoin address, and append you to the funding queue.
 
 The order of this queue matters. Shares in Nostrocket projects get offered to people in the order of this queue.
 
-### How does funding work for me as an investor?
+## How does funding work for me as an investor?
 When someone works on a Nostrocket project, shares are produced. You can see exactly what work was done to produce the shares by looking at the associated [pull request](https://www.pagerduty.com/resources/learn/what-is-a-pull-request/). Shares are only ever produced as a consequence of real work being done to solve a real problem that is in the critical path to more users or more revenue.
 
 These shares are the basis for revenue distribution when people start paying for whatever the project builds or whatever service it provides. As with most organizational structures, there's higher risk higher reward associated with being early.

@@ -57,10 +57,21 @@
                 </div>
             </div>
         </div>
+
+
+
     </div>
 </header>
-
-
+<div class="headlinks" style="background-color: rgb(2,10,42, 0.4);">
+    <div class="container">
+        <div id="l" class="images-center" style="width: 100%"></div>
+        <script>fetch('/links.md')
+            .then(response => response.text())
+            .then((data) => {
+                document.getElementById("l").replaceChildren(makeItHTML(data))
+            })</script>
+    </div>
+</div>
 <div style="background-color: rgb(22,0,64);padding-top: 14px;"><div class="container">
     <div id="w"></div>
     <script>fetch('/summary.md')
@@ -68,7 +79,7 @@
         .then((data) => {
             document.getElementById("w").replaceChildren(makeItHTML(data))
         })</script>
-    <div class="images-center">
+    <div class="images-center" style="padding-top: 24px;">
         <img src="images/rocket.png" style="width: 23%;margin-right: 2%"/><img src="images/equals.png" style="width: 12%;height:12%;margin-right: 3%;margin-top: auto;margin-bottom: auto;"/><img src="images/nostr.png" style="width: 23%;margin-right: 2%"/><img src="images/plus.png" style="width: 12%;height:12%;margin-right: 3%;margin-top: auto;margin-bottom: auto;"/><img src="images/btc.png" style="width: 23%;"/>
     </div>
     <div style="display: flex;justify-content: center;padding-bottom: 20px;color: #fa7a0b;">Built with Nostr and Bitcoin</div>
@@ -76,9 +87,9 @@
 
 
 <div style="background-color: rgb(76,0,112); padding-top: 14px;"><div class="container">
-    <h2 id="funding-queue">Funding Queue</h2>
-    <p>These people want to invest in Nostrocket projects and have produced a Bitcoin signed message to <a href="#">prove</a> they
-        have the sats ready to go. <a href="/funding.html">Join the queue now</a>.</p>
+    <h2 id="funding-queue">Funding Waitlist</h2>
+    <p>These people want to invest in Nostrocket projects and have produced a Bitcoin signed message to <a href="/verify.html">prove</a> they
+        have the sats ready to go.</p>
     <table>
         <thead>
         <tr>
@@ -94,10 +105,11 @@
         <td></td>
         </tbody>
     </table>
+    <div class="images-center"><a href="/funding.html">Join the waitlist now</a></div>
 </div></div>
 
 
-<div style="background-color: rgb(104,2,122)"><div class="container">
+<div style="background-color: rgb(93,2,110); padding-top: 14px;"><div class="container">
     <div id="x"></div>
     <script>fetch('/wtf.md')
         .then(response => response.text())
@@ -107,7 +119,7 @@
 </div></div>
 
 
-<div style="background-color: rgb(134,2,32)"><div class="container">
+<div style="background-color: rgb(119,2,30)"><div class="container">
     <div id="y"></div>
     <script>fetch('/getstarted.md')
         .then(response => response.text())
@@ -117,16 +129,17 @@
 </div></div>
 
 
-<div style="background-color: rgb(134,2,32)"><div class="container">
-    <div id="comments">
-    </div>
+<div style="background-color: rgb(119,2,30)">
+    <div class="container">
+    <div id="comments"></div>
     <script src="nostr.js"></script>
     <script src="comments.js"></script>
     <script>
         //thank you JB55 https://damus.io/log/2022-08-02-introducing-damus-log.html
         let relay = comments_init("503941a9939a4337d9aef7b92323c353441cb5ebe79f13fed77aeac615116354")
     </script>
-</div></div>
+</div>
+</div>
 
 <script src="countdown.js"></script>
 </body>

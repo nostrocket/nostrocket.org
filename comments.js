@@ -131,7 +131,7 @@ function fundingEvent(parsed, profile, ev) {
                         }
                         let tr_total = document.createElement("tr")
                         tr_total.id = "total_funding_row"
-                        tr_total.append(makeTd(), makeTd("TOTAL:"), makeTd(totalFunding.toLocaleString()+ " sats"))
+                        tr_total.append(makeTd(), makeTd("TOTAL"), makeTd(totalFunding.toLocaleString()+ " sats"))
                         t.appendChild(tr_total)
                     }
                     if (!result) {

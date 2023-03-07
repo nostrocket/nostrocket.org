@@ -8,14 +8,14 @@ The usefulness of a bucket exists due to the limitations or restrictions imposed
 
 Human organizational structures are useful because what they do with humans is analogous to what a bucket does with water. These structures are defined by their boundary conditions on human action - what type of action can humans take while remaining in the organizational structure.
 
-#### **Centrally planned** organizations like companies or governments restrict human action of members by:
+### **Centrally planned** organizations like companies or governments restrict human action of members by:
 * internal rules about what types of human action are permissible,
 * internal rulers with the power to decide when to update the internal rules and when to break them,
 * excluding people who "don't fit the culture" or aren't a "team player".
 
 Centrally planned organizations exist along a spectrum of just how centrally planned they are - from highly planned and executed military organizations to the *Teal* organizations as described by Frederic Laloux (well worth skimming through his book).
 
-#### **Decentralized organizations** restrict human action of members by:
+### **Decentralized organizations** restrict human action of members by:
 * deciding ahead of time on all the possible types of human action that is permissible, and
 * encoding the rules about these actions into some form of state machine (usually a smart contract).
 
@@ -25,7 +25,9 @@ There are more flexible decentralized organizational structures, but they invari
 
 Something similar happens when any type of upfront funding is involved. It not only creates a honeypot with an associated overhead to defend it, but also precludes the ability to do anything without widespread agreement on what to do. Nostrocket only allows funding in *response* to work that has already been done.
 
-#### The metric we use to judge if Nostrocket has optimal boundary conditions on human action is the **community size** - are humans being attracted to Nostrocket faster than any alternative?
+* * * 
+
+### The metric we use to judge if Nostrocket has optimal boundary conditions on human action is the **community size** - are humans being attracted to Nostrocket faster than any alternative?
 
 Humans with something to contribute should be better off by acting *within* a Nostrocket project than they are by acting outside of it.
 * Nostrocket must result in more value for participants than any other opportunity available to them.
@@ -38,7 +40,9 @@ Humans with something to contribute should be better off by acting *within* a No
 * The boundary conditions or limitations should be simple, explicit, clear, and graduated such that there's no overhead required to onboard new Participants into Nostrocket projects.
 * Amdahl's law can be restated as "the more you need consensus about what to build, the more inefficient you will be at building it". For Nostrocket projects to be the most efficient problem solvers and builders, they must require the least amount of consensus on what to build and how to build it.
 
-### An Ideal Nostrocket Protocol
+* * * 
+
+## An Ideal Nostrocket Protocol
 
 The core of Nostrocket must be a hill-climbing algorithm which optimises for increasing the number of Participants. If the size of the community around Nostrocket is not increasing, it's not working.
 
@@ -50,7 +54,7 @@ People need to pay the rent and be protected from burnout, but when people solve
 
 The life-force (or fuel) of civilisation is human action that yields surplus - that means production of surplus is in the critical path to more Participants, and so our algorithm must optimise for this.
 
-### What does this protocol look like?
+## What does this protocol look like?
 
 This is not the protocol, but this is the general idea of what to codify into a set of rules.
 

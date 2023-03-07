@@ -39,6 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 
 li {
     line-height: 1.4 ;
+    padding-bottom: 10px;
 }
 
 header {
@@ -291,7 +292,18 @@ a {
     z-index: 12;
 }
 
+.headlinks {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0;
+    z-index: 12;
+}
+
 @media (max-width: 800px) {
+    .headlinks {
+        position: relative;
+    }
     .images-center {
         width: 70%;
     }
