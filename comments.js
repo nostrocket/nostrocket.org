@@ -82,7 +82,7 @@ function render_event(model, ev) {
     let parsed = verifyBitcoinAddress(ev)
     if(parsed) {
         fundingEvent(parsed, profile, ev)
-    } else {
+    } else if (ev.created_at > 1678191250 && ev.pubkey !== "d91191e30e00444b942c0e82cad470b32af171764c2275bee0bd99377efd4075"){
         const delta = time_delta(new Date().getTime(), ev.created_at*1000)
         return `
 	<div class="comment">
