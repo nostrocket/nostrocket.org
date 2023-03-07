@@ -46,13 +46,12 @@ Nostrocket will automagically verify the signature, check the balance of your Bi
 The order of this queue matters. Shares in Nostrocket projects get offered to people in the order of this queue.
 
 ## How does funding work for me as an investor?
-When someone works on a Nostrocket project, shares are produced. You can see exactly what work was done to produce the shares by looking at the associated [pull request](https://www.pagerduty.com/resources/learn/what-is-a-pull-request/). Shares are only ever produced as a consequence of real work being done to solve a real problem that is in the critical path to more users or more revenue.
+When someone contributes work to a Nostrocket project, they submit an expense of the approximate value of that work. This is then peer reviewed such that shares are only ever produced as a consequence of real work being done to solve a real problem that is in the critical path to more users or more revenue.
 
-These shares are the basis for revenue distribution when people start paying for whatever the project builds or whatever service it provides. As with most organizational structures, there's higher risk higher reward associated with being early.
+If an expense is approved, the contributor has two options:
+1. The contributor can be issued with shares at a rate of 1:1 per satoshi claimed in the expense, OR
+2. The contributor can sell their expense to an investor who pays it and gets issued with the shares.
 
-When a contributor (someone working on a Nostrocket project) needs to sell their shares, the easiest and simplest way is to just use the Nostrocket platform to do it. This means that the shares go through a rolling dutch auction, being offered to people in the order that they joined the funding queue. Everyone in the queue has a right of first refusal before being offered to the next person. If the entire queue rejects the offer, it starts again at a lower price.
+If the contributor opts to sell their expense to an investor, it will be offered to investors in the order that the joined the funding waitlist.
 
-
-
-
-
+Everyone in the waitlist has a right of first refusal before being offered to the next person.

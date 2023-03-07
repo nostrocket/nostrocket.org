@@ -38,6 +38,17 @@
 </div>
 </header>
 
+<div class="headlinks" style="background-color: rgb(2,10,42, 0.4);">
+    <div class="container">
+        <div id="l" class="images-center" style="width: 100%"></div>
+        <script>fetch('/links.md')
+            .then(response => response.text())
+            .then((data) => {
+                document.getElementById("l").replaceChildren(makeItHTML(data))
+            })</script>
+    </div>
+</div>
+
 <div class="container" id="contents">
     <section id="main_content">
         <div id="summary"></div>
