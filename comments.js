@@ -5,9 +5,12 @@ function uuidv4() {
     );
 }
 
+const groupedEvents = new Map()
 
 async function comments_init(thread)
 {
+    
+    groupedEvents[thread]=[]
     const relay = await Relay("wss://relay.damus.io")
     const now = (new Date().getTime()) / 1000
     const model = {events: [], profiles: {}}
@@ -20,9 +23,27 @@ async function comments_init(thread)
     relay.subscribe(comments_id, {kinds: [1], "#e": [thread]})
 
     relay.event = (sub_id, ev) => {
+        // const eTagsCount = data.tags.filter(tag => tag.includes('e')).length;
         if (sub_id === comments_id) {
             if (ev.content !== "")
-                insert_event_sorted(model.events, ev)
+                if (findParentEvent(ev) === "04ca02a37b216047eb1501bdd62f9c1a568f0c84940fc9f361cb299e74ade325" ||findParentEvent(ev) ===  "503941a9939a4337d9aef7b92323c353441cb5ebe79f13fed77aeac615116354" ){
+                    insert_event_sorted(model.events, ev)
+                    // console.log(findParentEvent(ev),ev,'aaa///')
+                    // console.log(groupedEvents,'a')
+                    // console.log(groupedEvents[thread.id],'b',thread)
+                    if(groupedEvents[findParentEvent(ev)] === undefined){
+                        groupedEvents[findParentEvent(ev)] = []
+                    }
+                    insert_event_sorted(groupedEvents[findParentEvent(ev)], ev)             
+                } else {
+                    parentEvent = findParentEvent(ev)
+                    if(groupedEvents[parentEvent] === undefined){
+                        groupedEvents[parentEvent] = []
+                    }
+                    
+                    insert_event_sorted(groupedEvents[parentEvent], ev)
+                }
+                
             if (model.realtime)
                 render_home_view(model)
         } else if (sub_id === profiles_id) {
@@ -55,6 +76,7 @@ function handle_profiles_loaded(profiles_id, model) {
 // load profiles after comment notes are loaded
 function handle_comments_loaded(profiles_id, model)
 {
+    console.log(model.events,'aa')
     const pubkeys = model.events.reduce((s, ev) => {
         s.add(ev.pubkey)
         return s
@@ -74,7 +96,12 @@ function render_events(model) {
     return model.events.map(render).join("\n")
 }
 
-function render_event(model, ev) {
+
+
+function render_event(model, ev,display=true) {
+    // first, if ev.id is  in groupedEvents'key, render the parent event
+    // then, render the child events, set childevent's invisible to true
+    // if click on the "show replies" button, set the child events' invisible to false
     const profile = model.profiles[ev.pubkey] || {
         name: "anon",
         display_name: "Anonymous",
@@ -82,20 +109,94 @@ function render_event(model, ev) {
     let parsed = verifyBitcoinAddress(ev)
     if(parsed) {
         fundingEvent(parsed, profile, ev)
-    } else if (ev.created_at > 1678191250 && ev.pubkey !== "d91191e30e00444b942c0e82cad470b32af171764c2275bee0bd99377efd4075"){
+    } else if (ev.created_at > 1678191250 && ev.id !== "04ca02a37b216047eb1501bdd62f9c1a568f0c84940fc9f361cb299e74ade325"){
         const delta = time_delta(new Date().getTime(), ev.created_at*1000)
-        return `
-	<div class="comment">
-		<div class="info">
-		    <div class="username">${sanitize(get_name(ev.pubkey, profile))}</div>
-			<span>${delta}</span>
-		</div>
-		<img class="pfp" src="${get_picture(ev.pubkey, profile)}">
-		<p>
-		${format_content(ev.content)}
-		</p>
-	</div>
-	`
+        if (ev.id in groupedEvents && groupedEvents[ev.id]!=""){
+            console.log("1")
+            let childEvents = groupedEvents[ev.id]
+
+
+            if (display){
+                let childelements=[]
+                childEvents.forEach(function(item,index){
+                    a=render_event(model,item,false)
+                    childelements.push(a)
+                })
+
+                return `
+                <div  style="border-left:1px solid #fa7a0b;">
+                <div class="comment">
+                    <div class="info">
+                        <div class="username">${sanitize(get_name(ev.pubkey, profile))}</div>
+                        <span>${delta}</span>
+                    </div>
+                    <img class="pfp" src="${get_picture(ev.pubkey, profile)}">
+                    <p>
+                    ${format_content(ev.content)}
+                    </p>
+                </div>
+                `+ `\n` +childelements.join("/n")
+            }
+            else{
+
+                let childelements=[]
+                childEvents.forEach(function(item,index){
+                    a=render_event(model,item,false)
+                    childelements.push(a)
+                })
+                return `
+                <div class="comment hide">
+                    <div class="info">
+                        <div class="username">${sanitize(get_name(ev.pubkey, profile))}</div>
+                        <span>${delta}</span>
+                    </div>
+                    <img class="pfp" src="${get_picture(ev.pubkey, profile)}">
+                    <p>
+                    ${format_content(ev.content)}
+                    </p>
+
+                </div>
+                ` +`\n` +childelements.join("/n")
+            }
+ 
+        }
+ 
+        else {
+            if (display){
+                console.log("4")
+                return `
+                <div class="comment">
+                    <div class="info">
+                        <div class="username">${sanitize(get_name(ev.pubkey, profile))}</div>
+                        <span>${delta}</span>
+                    </div>
+                    <img class="pfp" src="${get_picture(ev.pubkey, profile)}">
+                    <p>
+                    ${format_content(ev.content)}
+                    </p>
+                </div>
+                `
+            }
+            else{
+                console.log("5")
+                return `
+                <div class="comment hide">
+                    <div class="info">
+                        <div class="username">${sanitize(get_name(ev.pubkey, profile))}</div>
+                        <span>${delta}</span>
+                    </div>
+                    <img class="pfp" src="${get_picture(ev.pubkey, profile)}">
+                    <p>
+                    ${format_content(ev.content)}
+                    </p>
+                </div>
+                </div>
+                `
+            }
+ 
+        }
+
+
     }
 }
 
@@ -243,3 +344,21 @@ function time_delta(current, previous) {
         return Math.round(elapsed/msPerYear ) + ' years ago';
     }
 }
+
+function findParentEvent(ev){
+    const dataWithReply = ev.tags.find(tag => tag[0] === 'e' && tag[2] === 'reply');
+    if (dataWithReply === undefined) {
+        let lastE = null;
+        for (let i = ev.tags.length - 1; i >= 0; i--) {
+            const tag = ev.tags[i];
+            if (tag.includes("e")) {
+                lastE = tag;
+                break;
+                }
+        }
+        return lastE[1]
+      } else {
+        return dataWithReply[1]
+      }
+    
+    }
