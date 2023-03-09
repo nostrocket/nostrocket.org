@@ -209,13 +209,23 @@ function render_event(model, ev, display = true) {
 
 function get_user_div(ev, profile) {
   return `
-    <div class="username" title="${
-      sanitize(get_display_name(ev.pubkey, profile)) || "Anonymous Coward"
-    }">${(
-    sanitize(
-      get_username(ev.pubkey, profile) || get_display_name(ev.pubkey, profile)
-    ) || anon_username
-  ).toLowerCase()}
+    <div classe="user">
+    <div class="display-name">
+        ${
+          sanitize(
+            get_display_name(ev.pubkey, profile) ||
+              get_username(ev.pubkey, profile)
+          ) || "Anonymous Coward"
+        }
+    </div>
+    <div class="username">${(
+      "@" +
+        sanitize(
+          get_username(ev.pubkey, profile) ||
+            get_display_name(ev.pubkey, profile)
+        ) || anon_username
+    ).toLowerCase()}
+  </div>
   </div>
       `;
 }

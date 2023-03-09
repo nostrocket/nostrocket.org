@@ -1,69 +1,73 @@
-
 .pfp {
-    width: 60px;
-    height: 60px;
-    margin: 0 15px 0 15px;
-    border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 0 15px 0 15px;
+  border-radius: 50%;
 }
 
 .comment {
-    display: flex;
-    font-family: system-ui, sans;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-    align-items: center;
+  display: flex;
+  font-family: system-ui, sans;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .comment p {
-    background-color: rgba(255.0,255.0,255.0,0.1);
-    padding: 10px;
-    border-radius: 8px;
-    margin: 0;
-    width: 55%;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  margin: 0;
+  width: 55%;
 }
 
 .comment .info {
-    text-align: right;
-    width: 18%;
-    line-height: 0.8em;
+  text-align: right;
+  width: 18%;
+  line-height: 0.8em;
+}
+
+.username {
+  font-size: small;
+  padding: 4px 0;
 }
 
 .quote {
-    border-left: 2px solid white;
-    margin-left: 10px;
-    padding: 10px;
-    background-color: rgba(255.0,255.0,255.0,0.1);
-    display: block;
+  border-left: 2px solid white;
+  margin-left: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: block;
 }
 
 .comment .info span {
-    font-size: 11px;
-    color: rgba(255.0,255.0,255.0,0.7);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
-@media (max-width: 800px){
-    /* Reverse the order of elements in the user comments,
+@media (max-width: 800px) {
+  /* Reverse the order of elements in the user comments,
     so that the avatar and info appear after the text. */
-    .comment .info {
-        order: 2;
-        width: 50%;
-        text-align: left;
-    }
+  .comment .info {
+    order: 2;
+    width: 50%;
+    text-align: left;
+  }
 
-    .pfp {
-        order: 1;
-        margin: 0 15px 0 0;
-    }
+  .pfp {
+    order: 1;
+    margin: 0 15px 0 0;
+  }
 
-    .comment {
-        padding: 10px;
-        border-radius: 8px;
-        background-color: rgba(255.0,255.0,255.0,0.1);
-    }
+  .comment {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 
-    .comment p {
-        order: 3;
-        margin-top: 10px;
-        width: 100%;
-    }
+  .comment p {
+    order: 3;
+    margin-top: 10px;
+    width: 100%;
+  }
 }
