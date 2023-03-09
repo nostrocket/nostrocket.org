@@ -1,6 +1,6 @@
 ## What is a micro-DAO?
 
-If you want a one-sentence definition of freedom, how about **the ability to do interesting things with other people**.
+If you want a one-sentence definition of freedom, how about *the ability to do interesting things with other people*.
 
 Organizations are fundamentally composed of human action (and *inter*-action), so this is the primitive we must work with to create Nostrocket.
 
