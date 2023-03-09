@@ -1,5 +1,7 @@
 ## What is a micro-DAO?
 
+It's what a DAO was supposed to be like.
+
 The term "DAO" has been tainted by shitcoinery and is the worst term to use, except for all the other possible terms.
 
 No matter what term we use to describe the way that humans organise within a Nostrocket project, it can always be destroyed by a shitcoin version of it. 
