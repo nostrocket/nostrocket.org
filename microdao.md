@@ -20,8 +20,6 @@ The term "DAO" has been tainted by shitcoinery and is the worst term to use, exc
 
 No matter what term we use to describe the way that humans organise within a Nostrocket project, it can always be destroyed by a shitcoin version of it. 
 
-Anyone who dismisses Nostrocket because it has the term "DAO" in it probably has nothing tangible to offer anyway.
-
 ### Can the shareholders in a micro-DAO conduct a rug-pull?
 
 Maybe. And that would be a shame.
