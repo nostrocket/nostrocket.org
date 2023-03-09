@@ -15,7 +15,7 @@ function verifyBitcoinAddress(ev) {
 }
 
 function verifyBitcoinSignedEvent(npub, btcAddress, sig) {
-    return bitcoin.verify(npub, btcAddress, sig)
+    return bitcoin.verify(npub, btcAddress, sig, '', true)
 }
 
 
