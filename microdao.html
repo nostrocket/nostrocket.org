@@ -27,7 +27,6 @@
     <script src="verifyBitcoinSignedMessage.js"></script>
     <script src="https://unpkg.com/nostr-tools/lib/nostr.bundle.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Ubuntu&subset=cyrillic,latin' rel='stylesheet' type='text/css' />
-
 </head>
 
 <body>
@@ -54,18 +53,11 @@
     <section id="main_content">
         <div id="summary"></div>
         <script>
-            fetch('/faq.md')
+            fetch('/microdao.md')
             .then(response => response.text())
             .then((data) => {
                 document.getElementById("summary").replaceChildren(makeItHTML(data))
             })</script>
-        <div id="md"></div>
-        <script>
-            fetch('/microdao.md')
-                .then(response => response.text())
-                .then((data) => {
-                    document.getElementById("md").replaceChildren(makeItHTML(data))
-                })</script>
 
     </section>
     <div id="comments">

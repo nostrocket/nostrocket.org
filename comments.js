@@ -131,7 +131,7 @@ function render_event(model, ev, display = true) {
 
         return (
           `
-                <div  style="border-left:1px solid #fa7a0b;">
+                <div  style="border-left:3px solid #fa7a0b;">
                 <div class="comment">
                     <div class="info">
                         ${get_user_div(ev, profile)}

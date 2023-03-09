@@ -1,6 +1,6 @@
 ## The <u>fastest way ever</u> to make an open source project profitable.
 
-Nostrocket is a **micro-DAO factory** built with Bitcoin and Nostr. It provides a hyper-efficient and radically fair way for anyone to collaborate on open source projects for *fun and profit*.
+Nostrocket is a **[micro-DAO](/microdao.html) factory** built with Bitcoin and Nostr. It provides a hyper-efficient and radically fair way for anyone to collaborate on open source projects for *fun and profit*.
 
 Nostrocket makes open source projects **hyper-efficient** because work can be done asynchronously without [organizational mutexes](/mutexes.html). It makes them [radically fair](/protocol.html) in the way that participants form consensus over the value of each contribution. 
 
