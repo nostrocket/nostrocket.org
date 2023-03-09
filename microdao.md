@@ -6,7 +6,7 @@ Organizations are fundamentally composed of human action (and *inter*-action), s
 
 The usefulness of a bucket exists due to the limitations or restrictions imposed by its base and sides. A bucket is useful because it holds water by creating *boundary conditions* on what the water *cannot* do while *remaining in the bucket*.
 
-What a Nostrocket micro-DAO does with humans is analogous to what a bucket does with water. A micro-DAO is defined by the boundary conditions on human action - what type of action can humans perform withing the organizational structure.
+What a Nostrocket micro-DAO does with humans is analogous to what a bucket does with water. A micro-DAO is defined by the boundary conditions it places on human action - what type of action humans can perform within the organization. A micro-DAO focuses human action the same way that an ASIC focuses energy.
 
 ### DAO is a shitty term, thanks to shitcoinery
 
