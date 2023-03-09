@@ -15,9 +15,9 @@ Nostrocket will see this event and add you to the funding queue.
 
 ## How do I do this?
 
-Most Bitcoin wallets support producing BIP-322 signed messages. This proves that you own a certain Bitcoin address.
+You will require a wallet capable of producing a Bitcoin Signed Message (BIP-322). This proves that you own a certain Bitcoin address.
 
-If your wallet does not support this, I don't know what to tell you.
+If your wallet doesn't support this, I don't know what to tell you other than to use a different wallet.
 
 ### Step 1
 Your wallet will ask you for the message (text) you want to sign. Copy and paste your *npub* into this text field, with no white spaces.
