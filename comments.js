@@ -208,15 +208,19 @@ function render_event(model, ev, display = true) {
 }
 
 function get_user_div(ev, profile) {
+  let snort = "https://nostr.band/" + window.NostrTools.nip19.npubEncode(ev.pubkey)
   return `
     <div classe="user">
     <div class="display-name">
+    
+    <a href=${snort}>
         ${
           sanitize(
             get_display_name(ev.pubkey, profile) ||
               get_username(ev.pubkey, profile)
           ) || "Anonymous Coward"
         }
+        </a>
     </div>
     <div class="username">${(
       "@" +
