@@ -1,6 +1,6 @@
 ## What is a micro-DAO?
 
-If you want a one-sentence definition of freedom, it's "the ability to do interesting things with other people"
+If you want a one-sentence definition of freedom, it's "the ability to do interesting things with other people".
 
 Organizations are fundamentally composed of human action (and *inter*-action), so this is the primitive we must work with to create Nostrocket.
 
@@ -24,6 +24,6 @@ There's only **one** way to really secure a system against a rug-pull, and that'
 
 Unfortunately, proof of energy is only useful for a money, and not a flexible organisation of humans performing a variety of work in pursuit of shared values.
 
-The way that Nostrocket mitigates against this risk is to use the concept of Votepower, and Blackball Voting.
+The way that Nostrocket mitigates against this risk is to use the concept of [Votepower](/protocol.html), and [Blackball Voting](https://en.wikipedia.org/wiki/Blackballing).
 
-It should theoretically take just **one** very determined individual within a Nostrocket micro-DAO to prevent a rug-pull.
+It should theoretically take just *one* very determined individual within a Nostrocket micro-DAO to prevent a rug-pull.
