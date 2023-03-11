@@ -15,7 +15,7 @@ Human organizational structures are useful because what they do with humans is a
 
 Centrally planned organizations exist along a spectrum of just how centrally planned they are - from highly planned and executed military organizations to the *Teal* organizations as described by Frederic Laloux (well worth skimming through his book).
 
-### **Decentralized organizations** restrict human action of members by:
+### **Decentralized organizations** (DAOs) restrict human action of members by:
 * deciding ahead of time on all the possible types of human action that is permissible, and
 * encoding the rules about these actions into some form of state machine (usually a smart contract).
 

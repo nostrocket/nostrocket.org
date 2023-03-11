@@ -61,7 +61,7 @@
             })</script>
         <div id="md"></div>
         <script>
-            fetch('/microdao.md')
+            fetch('/self-organizing-unorganization.md')
                 .then(response => response.text())
                 .then((data) => {
                     document.getElementById("md").replaceChildren(makeItHTML(data))
