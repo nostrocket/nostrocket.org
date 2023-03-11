@@ -14,8 +14,7 @@ A Nostrocket SOU provides boundary conditions on human action to focus it toward
 
 What a Nostrocket SOU does with humans is analogous to what a bucket does with water and what an ASIC does with energy. 
 
-A micro-DAO is defined by the boundary conditions it places on human action - what type of action humans can perform within the organization. 
-A micro-DAO is defined by the boundary conditions it places on human action - what type of action humans can perform within the organization.
+A SOU is defined by the boundary conditions it places on human action - what type of action humans can perform within the organization.
 
 ### Can the shareholders in a Nostrocket SOU conduct a rug-pull?
 
