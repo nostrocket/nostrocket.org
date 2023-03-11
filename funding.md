@@ -43,10 +43,10 @@ Read [this](/verify.html).
 ## What happens next?
 Nostrocket will automagically verify the signature, check the balance of your Bitcoin address, and append you to the funding queue.
 
-The order of this queue matters. Shares in Nostrocket projects get offered to people in the order of this queue.
+The order of this queue matters. Shares in Subrockets get offered to people in the order of this queue.
 
 ## How does funding work for me as an investor?
-When someone contributes work to a Nostrocket project, they submit an expense of the approximate value of that work. This is then peer reviewed such that shares are only ever produced as a consequence of real work being done to solve a real problem that is in the critical path to more users or more revenue.
+When someone contributes work to a Subrocket, they submit an expense of the approximate value of that work. This is then peer reviewed such that shares are only ever produced as a consequence of real work being done to solve a real problem that is in the critical path to more users or more revenue.
 
 If an expense is approved, the contributor has two options:
 1. The contributor can be issued with shares at a rate of 1:1 per satoshi claimed in the expense, OR

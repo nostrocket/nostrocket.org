@@ -11,22 +11,22 @@ There's no limit to the number of reasons why Nostrocket depends on Bitcoin, as 
 * Nostrocket requires transactions to work even when powerful actors want to censor them.
 * If Nostrocket really blasts off, The Fiat Dominion will perceive it as a threat and try to kill it, so it has to be sufficiently robust. This means Nostrocket must somehow be rooted in Proof of Energy.
 * Nostrocket requires some mechanism by which state can be considered *immutable* - optimising to execute and settle state as close as possible to the "bare metal" of Bitcoin allows immutability to be secured by raw energy.
-* We need to know (in a way that leaves no doubt) when something doesn't work and let Nostrocket's *ideas* die instead of Nostrocket itself. Bitcoin is a source of *Darwinian* truth, and *can* act as guard rails against Darwinian mistakes - does a particular Nostrocket project produce surplus or not?
+* We need to know (in a way that leaves no doubt) when something doesn't work and let Nostrocket's *ideas* die instead of Nostrocket itself. Bitcoin is a source of *Darwinian* truth, and *can* act as guard rails against Darwinian mistakes - does a particular Subrocket produce surplus or not?
 
 * * *
 
 ## How does Nostrocket work economically?
-A Nostrocket project is kind of like a company.
+A Subrocket is kind of like a company.
 
-Nostrocket projects revolve around Shares. Each Nostrocket project has its own set of Shares. These represent work that has been done within the project.
+Subrockets revolve around Shares. Each Subrocket has its own set of Shares. These represent work that has been done within the project.
 * Shares are ONLY created by approving an expense.
 * An Expense is ONLY created in response to work done, this can be a merged pull-request, or it could be things like paying for a VPS to host a relay, or time spent on devops or whatever.
 * Shares are always produced 1:1 per satoshi claimed in the expense
 
-There is a process to ensure that all Nostrocket projects are solving real problems, and so projects are expected to produce revenue at some point.
+There is a process to ensure that all Subrockets are solving real problems, and so projects are expected to produce revenue at some point.
 * Nostrocket is noncustodial. Revenue goes straight to shareholders in proportion to how many shares they have and how long they have had them.
 
-The only way to get shares in a Nostrocket project is to do work solving problems and claim an expense, or pay for someone's approved expense or buy their shares.
+The only way to get shares in a Subrocket is to do work solving problems and claim an expense, or pay for someone's approved expense or buy their shares.
 
 Contributors who are not interested in the future revenue of a project and only want to be paid in sats for every contribution they make should indicate this in their expense request.
 * When their expense is approved, shares will not be credited to their account. Instead, the expense will be offered to investors (and sometimes this might be the project creator), who will be instructed to pay the expense amount to the contributor's LNURL or Bitcoin address. 
@@ -42,7 +42,7 @@ Contributors can switch between shares and direct payment with every expense req
 
 ## How are expenses approved?
 
-When a contributor submits an expense to a Nostrocket project, they also provide a link to the merged pull request or evidence of the work they have done in the case of non-code contributions.
+When a contributor submits an expense to a Subrocket, they also provide a link to the merged pull request or evidence of the work they have done in the case of non-code contributions.
 
 The existing shareholders in the project can then vote to approve or reject the expense.
 

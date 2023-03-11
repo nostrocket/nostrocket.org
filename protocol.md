@@ -29,16 +29,16 @@ Something similar happens when any type of upfront funding is involved. It not o
 
 ### The metric we use to judge if Nostrocket has optimal boundary conditions on human action is the **community size** - are humans being attracted to Nostrocket faster than any alternative?
 
-Humans with something to contribute should be better off by acting *within* a Nostrocket project than they are by acting outside of it.
+Humans with something to contribute should be better off by acting *within* a Subrocket than they are by acting outside of it.
 * Nostrocket must result in more value for participants than any other opportunity available to them.
 * Nostrocket must become, and actively remain, the most efficient organizational paradigm available
-  * The mechanism by which work gets done within Nostrocket projects SHOULD NOT *require* upfront agreement on what that work should involve or what the end result should look like
-    * Nostrocket projects MUST NOT *require* any upfront funding and MUST NOT *be capable* of retaining any capital (non-custodial, can't be evil)
-    * To remove any internal friction, Nostrocket projects must be radically fair to all participants regardless of how early or late they are
+  * The mechanism by which work gets done within Subrockets SHOULD NOT *require* upfront agreement on what that work should involve or what the end result should look like
+    * Subrockets MUST NOT *require* any upfront funding and MUST NOT *be capable* of retaining any capital (non-custodial, can't be evil)
+    * To remove any internal friction, Subrockets must be radically fair to all participants regardless of how early or late they are
         * Nostrocket's rules and ideology must be as pristine and *credibly neutral* as possible
         * It's not possible to be as pristine and neutral as Bitcoin because Nostrocket is an organizational paradigm while Bitcoin is property, but Bitcoin is the standard to judge against.
-* The boundary conditions or limitations should be simple, explicit, clear, and graduated such that there's no overhead required to onboard new Participants into Nostrocket projects.
-* Amdahl's law can be restated as "the more you need consensus about what to build, the more inefficient you will be at building it". For Nostrocket projects to be the most efficient problem solvers and builders, they must require the least amount of consensus on what to build and how to build it.
+* The boundary conditions or limitations should be simple, explicit, clear, and graduated such that there's no overhead required to onboard new Participants into Subrockets.
+* Amdahl's law can be restated as "the more you need consensus about what to build, the more inefficient you will be at building it". For Subrockets to be the most efficient problem solvers and builders, they must require the least amount of consensus on what to build and how to build it.
 
 * * * 
 
@@ -46,9 +46,9 @@ Humans with something to contribute should be better off by acting *within* a No
 
 The core of Nostrocket must be a hill-climbing algorithm which optimises for increasing the number of Participants. If the size of the community around Nostrocket is not increasing, it's not working.
 
-Software can be used to make things more efficient and to provide continuity of the state of Nostrocket projects, but the algorithm itself is primarily executed by self-interested human action and not a machine.
+Software can be used to make things more efficient and to provide continuity of the state of Subrockets, but the algorithm itself is primarily executed by self-interested human action and not a machine.
 
-Human action within Nostrocket projects must be executed for purely self-interested reasons in order for it to be optimally efficient, accurate, scalable, and to minimise any social attack surface. 
+Human action within Subrockets must be executed for purely self-interested reasons in order for it to be optimally efficient, accurate, scalable, and to minimise any social attack surface. 
 
 People need to pay the rent and be protected from burnout, but when people solve problems for their own reasons the solutions are more accurate than when they are doing it because someone is paying them. A case in point: organic contributions to wikipedia vs. paid contributions.
 
@@ -58,7 +58,7 @@ The life-force (or fuel) of civilisation is human action that yields surplus - t
 
 The protoocol is a work in progress, but this is the general idea of what to codify into a set of rules.
 
-1. A Nostrocket project starts with a problem statement from the project creator.
+1. A Subrocket starts with a problem statement from the project creator.
     * This is the starting point because for a project to be a success it must solve a real problem for real people.
 2. The project creator refines the problem statement into a very simple mission statement. 
     * A software project is the codification of the values of a group of people. The mission statement is the stated reason for the group to exist.
@@ -94,7 +94,7 @@ The protoocol is a work in progress, but this is the general idea of what to cod
      * Shares exist in an order based on when they were created, this order is reset if shares are sold. This is the order in which shares get repaid from revenue generated by the project.
      * There is a benefit in having shares earlier when the risk is higher, but this aspect requires more thinking and discussion to ensure that everyone from the early contributors to the people who come along years later are both happy that it's fair and logical.
      * Shares MUST ONLY ever be created by approving an expense and MUST NOT be created *any other way*
-     * Each Nostrocket project is instantiated with a *single* share to bootstrap the Votepower process (the project creator owns the first share).
+     * Each Subrocket is instantiated with a *single* share to bootstrap the Votepower process (the project creator owns the first share).
 10. Participants own *all* revenue produced by the project, the Sats are streamed *directly* to Participants in proportion to the number of Shares they have and how long they've had them.
      * When there's a pot of money available, Mallory finds a way to corrupt whatever is guarding it.
      * Nostrocket MUST NOT store any capital or raise any funds. It is completely non-custodial and value can only transfer between people using Nostrocket but not to or from Nostrocket itself.
