@@ -48,12 +48,11 @@
             })</script>
     </div>
 </div>
-
 <div class="container" id="contents">
     <section id="main_content">
         <div id="summary"></div>
         <script>
-            fetch('/sou.md')
+            fetch('/self-organizing-unorganization.md')
             .then(response => response.text())
             .then((data) => {
                 document.getElementById("summary").replaceChildren(makeItHTML(data))
