@@ -1,6 +1,6 @@
 ## What is a SOU?
 
-A Self Organizing Unorganization is a mechanism by which multiple people can worth together on a shared profit-seeking endeavor without *requiring* leadership or [organizational mutexes](/mutexes.html).
+A Self Organizing Unorganization is a way for multiple people to work together on a shared profit-seeking endeavor without *requiring* leadership or [organizational mutexes](/mutexes.html).
 
 If you want a one-sentence definition of freedom, how about *the ability to do interesting things with other people*. This is the point of a SOU.
 
