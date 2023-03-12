@@ -14,7 +14,7 @@ const groupedEvents = new Map();
 
 async function comments_init(thread) {
   groupedEvents[thread] = [];
-  const relay = await Relay("wss://15171031.688.org");
+  const relay = await Relay("wss://relay.damus.io");
   const now = new Date().getTime() / 1000;
   const model = { events: [], profiles: {} };
   const comments_id = uuidv4();
