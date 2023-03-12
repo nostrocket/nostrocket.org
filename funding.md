@@ -55,3 +55,8 @@ If an expense is approved, the contributor has two options:
 If the contributor opts to sell their expense to an investor, it will be offered to investors in the order that the joined the funding waitlist.
 
 Everyone in the waitlist has a right of first refusal before being offered to the next person.
+
+## Security considerations
+This should go without saying, but doing this allows other people can see that you own:
+- the Bitcoin address you provide
+- the amount of Bitcoin that you have in the address
