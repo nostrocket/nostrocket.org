@@ -19,6 +19,7 @@ async function comments_init(thread) {
   const model = { events: [], profiles: {} };
   const comments_id = uuidv4();
   const profiles_id = uuidv4();
+ 
 
   model.pool = relay;
   model.el = document.querySelector("#comments");
@@ -81,15 +82,25 @@ function handle_profiles_loaded(profiles_id, model) {
 }
 
 // load profiles after comment notes are loaded
-function handle_comments_loaded(profiles_id, model) {
-  console.log(model.events, "aa");
-  const pubkeys = model.events.reduce((s, ev) => {
-    s.add(ev.pubkey);
-    return s;
-  }, new Set());
-  const authors = Array.from(pubkeys);
 
-  // load profiles
+
+function find_all_pubkeys(evs){
+  s= new Set()
+  for (ev of evs){
+    if (groupedEvents[ev.id] === undefined) {
+      s.add(ev.pubkey)
+    } else
+      {
+        s.add(ev.pubkey)
+        s = new Set([...s,...find_all_pubkeys(groupedEvents[ev.id])])
+  }
+}
+return s
+}
+
+function handle_comments_loaded(profiles_id, model) {
+  const pubkeys = find_all_pubkeys(model.events)
+  const authors = Array.from(pubkeys);
   model.pool.subscribe(profiles_id, { kinds: [0], authors: authors });
 }
 
@@ -174,7 +185,6 @@ function render_event(model, ev, display = true) {
       }
     } else {
       if (display) {
-        console.log("4");
         return `
                 <div class="comment">
                     <div class="info">
@@ -188,7 +198,6 @@ function render_event(model, ev, display = true) {
                 </div>
                 `;
       } else {
-        console.log("5");
         return `
                 <div class="comment hide">
                     <div class="info">
@@ -358,8 +367,8 @@ function get_username(pk, profile = {}) {
 
 function get_display_name(pk, profile = {}) {
   const display_name = profile.display_name || profile.user;
-  console.log(profile);
-  console.log(`display_name: ${display_name}`);
+  // console.log(profile,"aaaaaaaaaaaaaaaaaaaaaaa");
+  // console.log(`display_name: ${display_name}`);
   return display_name;
 }
 
