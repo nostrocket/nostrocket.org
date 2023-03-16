@@ -38,5 +38,5 @@ function initializeClock(id, endtime) {
     const timeinterval = setInterval(updateClock, 1000);
 }
 
-const deadline = new Date(Date.parse("2023-03-25"));
+const deadline = new Date(Date.parse("2023-03-27"));
 initializeClock('clockdiv', deadline);
