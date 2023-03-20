@@ -15,7 +15,9 @@ function verifyBitcoinAddress(ev) {
 }
 
 function verifyBitcoinSignedEvent(npub, btcAddress, sig) {
-    return bitcoin.verify(npub, btcAddress, sig, '', true)
+    let res = bitcoin.verify(npub, btcAddress, sig, '', true)
+    if (!res) (console.log(npub, btcAddress, "sig failed"))
+    return res
 }
 
 
