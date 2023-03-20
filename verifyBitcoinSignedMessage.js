@@ -30,6 +30,7 @@ async function getBalance(address) {
                     if (result !== "failed") {
                         resolve(result)
                     } else {
+                        console.log(address)
                         resolve(false)
                     }
                 })
