@@ -4,7 +4,7 @@ Funding commitments are Nostr events that contain a Bitcoin Signed Message (BIP-
 
 
 
-You can use a library to validate these events, for example Nostrocket uses [this one](https://github.com/bitcoinjs/bitcoinjs-message) and has implemented it in [this file](https://github.com/nostrocket/nostrocket.github.io/nostr.hk/blob/master/verifyBitcoinSignedMessage.js). But the easiest way is to use an online tool which supports legacy as well as segwit Bitcoin addresses.
+You can use a library to validate these events, for example Nostrocket uses [this one](https://github.com/bitcoinjs/bitcoinjs-message) and has implemented it in [this file](https://github.com/nostrocket/nostr.hk/blob/master/verifyBitcoinSignedMessage.js). But the easiest way is to use an online tool which supports legacy as well as segwit Bitcoin addresses.
 
 ### Step 1
 Find a Bitcoin Signed Message validation tool that supports segwit, [this one](https://www.verifybitcoinmessage.com/) for example.
