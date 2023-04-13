@@ -78,35 +78,7 @@
         .then((data) => {
             document.getElementById("w").replaceChildren(makeItHTML(data))
         })</script>
-    <div class="images-center" style="padding-top: 24px;">
-        <img src="images/rocket.png" style="width: 23%;margin-right: 2%"/><img src="images/equals.png" style="width: 12%;height:12%;margin-right: 3%;margin-top: auto;margin-bottom: auto;"/><img src="images/nostr.png" style="width: 23%;margin-right: 2%"/><img src="images/plus.png" style="width: 12%;height:12%;margin-right: 3%;margin-top: auto;margin-bottom: auto;"/><img src="images/btc.png" style="width: 23%;"/>
-    </div>
-    <div style="display: flex;justify-content: center;padding-bottom: 20px;color: #fa7a0b;">Built with Nostr and Bitcoin</div>
 </div></div>
-
-
-<div style="background-color: rgb(76,0,112); padding-top: 14px;"><div class="container">
-    <h2 id="funding-queue">Funding Waitlist</h2>
-    <p>These people want to invest in Subrockets and have produced a Bitcoin signed message to <a href="/verify.html">prove</a> they
-        have the sats ready to go.</p>
-    <table>
-        <thead>
-        <tr>
-            <th style="text-align: left">#</th>
-            <th style="text-align: left">name</th>
-            <th style="text-align: left">amount</th>
-        </tr>
-        </thead>
-        <tbody id="funders">
-        <td>0</td>
-        <td>Fetching, please wait</td>
-        <td></td>
-        <td></td>
-        </tbody>
-    </table>
-    <div class="images-center"><a href="/funding.html">Join the waitlist now</a></div>
-</div></div>
-
 
 <div style="background-color: rgb(93,2,110); padding-top: 14px;"><div class="container">
     <div id="x"></div>
