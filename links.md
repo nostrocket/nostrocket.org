@@ -1,1 +1,1 @@
-[Start Now](/getstarted.html) | [FAQ](/faq.html) | [Protocol](/protocol.html) | [Funding](/funding.html) | [GitHub](https://github.com/nostrocket/nostr.hk) | [Nostr Thread](https://snort.social/e/note12qu5r2vnnfpn0kdw77ujxg7r2dzped0tu7038lkh0t4vv9g3vd2qjxr9c7) | [Telegram Group](https://t.me/nostrhk)
+[Join](/getstarted.html) | [FAQ](/faq.html) | [GitHub](https://github.com/nostrocket/nostr.hk) | [Nostr Thread](https://snort.social/e/note134slxdr2np6ml5f459me8cfmzg6cgw46c2agv55mtq55mtdtcgaqu4af4l) | [Telegram Group](https://t.me/nostrhk)
