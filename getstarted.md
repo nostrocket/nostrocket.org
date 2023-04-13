@@ -1,4 +1,3 @@
-## Get Started Now
-You can watch progress on [GitHub](https://github.com/nostrocket) for now until we replace it with a decentralized GitHub built with Nostrocket.
+## Join the Community
 
-Reply to [this thread](https://snort.social/e/note12qu5r2vnnfpn0kdw77ujxg7r2dzped0tu7038lkh0t4vv9g3vd2qjxr9c7) to receive a DM when Nostrocket is ready for blast off (probably around the end of Nostrica). Building systems like this is a challenge and the first pass is usually a clusterf*ck. If the numbers of Subrockets or participants need to be initially restricted we'll use an invite list based on the order in which people reply to [this thread](https://snort.social/e/note12qu5r2vnnfpn0kdw77ujxg7r2dzped0tu7038lkh0t4vv9g3vd2qjxr9c7).
+Reply to [this thread](https://snort.social/e/note134slxdr2np6ml5f459me8cfmzg6cgw46c2agv55mtq55mtdtcgaqu4af4l) to find other nostriches in HK and to receive a DM for further meetup notifictaion.  
