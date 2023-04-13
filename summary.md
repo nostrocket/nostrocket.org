@@ -1,7 +1,5 @@
-## The <u>fastest way ever</u> to make an open source project profitable.
+## What is Nostr
 
-Nostrocket is a **[Self Organizing Unorganization (SOU)](/self-organizing-unorganization.html) factory** built with Bitcoin and Nostr. It provides a hyper-efficient and radically fair way for anyone to collaborate on open source projects for *fun and profit*.
+Nostr stands for "Notes and Other Stuff Transmitted by Relays". Like HTTP or TCP-IP, Nostr is a protocol; an open standard upon which anyone can build. Nostr itself is not an app or service that you sign up for.
 
-Nostrocket makes open source projects **hyper-efficient** because work can be done asynchronously without [organizational mutexes](/mutexes.html). It makes them [radically fair](/protocol.html) in the way that participants form consensus over the value of each contribution. 
-
-It makes projects **rapidly profitable** by providing guard rails against solving problems that are not in the **critical path** to more participation and revenue. It makes them **perpetually sustainable** in the way that they [distribute project revenue](/protocol.html) to project creators, investors, and contributors.
+Nostr is designed for simplicity and enables censorship-resistant and globally decentralized publishing on the web. It can not only replace twitter but also will dominant all services aiming at busniess related to infomation exchange. 
