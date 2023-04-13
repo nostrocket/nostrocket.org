@@ -65,7 +65,7 @@
 <div class="headlinks" style="background-color: rgb(2,10,42, 0.4);">
     <div class="container">
         <div id="l" class="images-center" style="width: 100%"></div>
-        <script>fetch('/links.md')
+        <script>fetch('links.md')
             .then(response => response.text())
             .then((data) => {
                 document.getElementById("l").replaceChildren(makeItHTML(data))
@@ -74,7 +74,7 @@
 </div>
 <div style="background-color: rgb(22,0,64);padding-top: 14px;"><div class="container">
     <div id="w"></div>
-    <script>fetch('/summary.md')
+    <script>fetch('summary.md')
         .then(response => response.text())
         .then((data) => {
             document.getElementById("w").replaceChildren(makeItHTML(data))
@@ -111,7 +111,7 @@
 
 <div style="background-color: rgb(93,2,110); padding-top: 14px;"><div class="container">
     <div id="x"></div>
-    <script>fetch('/wtf.md')
+    <script>fetch('wtf.md')
         .then(response => response.text())
         .then((data) => {
             document.getElementById("x").replaceChildren(makeItHTML(data))
@@ -121,7 +121,7 @@
 
 <div style="background-color: rgb(119,2,30)"><div class="container">
     <div id="y"></div>
-    <script>fetch('/getstarted.md')
+    <script>fetch('getstarted.md')
         .then(response => response.text())
         .then((data) => {
             document.getElementById("y").replaceChildren(makeItHTML(data))
