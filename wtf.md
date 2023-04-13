@@ -1,7 +1,3 @@
 ## What is Nostr Hong Kong?
 
-Nostr Hong Kong is a group that focus on 
-
-- Foster and promote Nostr in Hong Kong.
-- Help nostriches find each other and catch up with the latest Nostr projects, news and technology trend.
-- Provide resources for the local and international Nostr community.
+The mission of Nostr Hong Kong is to provide people who are interested in Nostr with a way to meet up and have fun.
