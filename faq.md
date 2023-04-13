@@ -34,7 +34,7 @@ Contributors who are not interested in the future revenue of a project and only 
 
 Contributors can switch between shares and direct payment with every expense request.
 
-![Swimlane](/images/swimlane.png)
+![Swimlane](images/swimlane.png)
 
 [Further Reading](/protocol.html)
 

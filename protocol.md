@@ -100,4 +100,4 @@ The protoocol is a work in progress, but this is the general idea of what to cod
      * Nostrocket MUST NOT store any capital or raise any funds. It is completely non-custodial and value can only transfer between people using Nostrocket but not to or from Nostrocket itself.
 
 ## How shares are created
-![Swimlane](/images/swimlane.png)
+![Swimlane](images/swimlane.png)

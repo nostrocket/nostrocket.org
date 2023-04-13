@@ -129,7 +129,7 @@ dt {
 }
 
 ul li {
-    list-style-image:url('/images/bullet_btc.png');
+    list-style-image:url('images/bullet_btc.png');
 }
 
 blockquote {
@@ -215,7 +215,7 @@ hr {
 
 .btn-github .icon {
     opacity: 0.6;
-    background: url("/images/blacktocat.png") 0 0 no-repeat;
+    background: url("images/blacktocat.png") 0 0 no-repeat;
 }
 
 a {
@@ -269,7 +269,7 @@ a {
     width: 100%;
     aspect-ratio: 1393/484;
     //height: ;
-    background-image: url("/images/nostrocket_wide.png");
+    background-image: url("images/nostrocket_wide.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
