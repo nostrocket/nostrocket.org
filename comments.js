@@ -34,7 +34,7 @@ async function comments_init(thread) {
           findParentEvent(ev) ===
             "04ca02a37b216047eb1501bdd62f9c1a568f0c84940fc9f361cb299e74ade325" ||
           findParentEvent(ev) ===
-            "503941a9939a4337d9aef7b92323c353441cb5ebe79f13fed77aeac615116354"
+            "8d61f3346a9875bfd135a17793e13b1235843abac2ba86529b58294dadabc23a"
         ) {
           insert_event_sorted(model.events, ev);
           // console.log(findParentEvent(ev),ev,'aaa///')
