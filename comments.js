@@ -123,7 +123,7 @@ function render_event(model, ev, display = true) {
   };
   let parsed = verifyBitcoinAddress(ev);
   if (parsed) {
-    fundingEvent(parsed, profile, ev);
+    //fundingEvent(parsed, profile, ev);
   } else if (
     ev.created_at > 1678191250 &&
     ev.id !== "04ca02a37b216047eb1501bdd62f9c1a568f0c84940fc9f361cb299e74ade325"
@@ -247,72 +247,72 @@ var funders = -1;
 var addresses = new Map();
 var totalFunding = 0;
 
-function fundingEvent(parsed, profile, ev) {
-  try {
-    if (
-      verifyBitcoinSignedEvent(
-        window.NostrTools.nip19.npubEncode(ev.pubkey),
-        parsed[0],
-        parsed[1]
-      )
-    ) {
-      if (!addresses.get(parsed[0])) {
-        addresses.set(parsed[0], true);
-        let t = document.getElementById("funders");
-        let tr = document.createElement("tr");
-        tr.id = "table_row_" + ev.id;
-        tr.appendChild(makeTd(funders + 1));
-        let name =
-          sanitize(
-            get_username(ev.pubkey, profile) ||
-              get_display_name(ev.pubkey, profile)
-          ).toLowerCase() || anon_username;
-        let link = document.createElement("a");
-        link.href =
-          "https://snort.social/e/" + window.NostrTools.nip19.noteEncode(ev.id);
-        link.innerText = name;
-        link.title =
-          get_display_name(ev.pubkey, profile) ||
-          get_username(ev.pubkey, profile) ||
-          anon_display_name;
-        let name_proof = makeTd();
-        name_proof.appendChild(link);
-        tr.appendChild(name_proof);
-        let amountRow = makeTd("Fetching amount....");
-        getBalance(parsed[0]).then((result) => {
-          if (result) {
-            amountRow.innerText = result.toLocaleString() + " sats";
-            totalFunding += result;
-            if (document.getElementById("total_funding_row")) {
-              document.getElementById("total_funding_row").remove();
-            }
-            let tr_total = document.createElement("tr");
-            tr_total.id = "total_funding_row";
-            tr_total.append(
-              makeTd(),
-              makeTd("TOTAL"),
-              makeTd(totalFunding.toLocaleString() + " sats")
-            );
-            t.appendChild(tr_total);
-          }
-          if (!result) {
-            if (result === 0) {
-              document.getElementById("table_row_" + ev.id).remove();
-              funders--;
-            }
-          }
-        });
-        tr.appendChild(amountRow);
-        if (funders < 0) {
-          t.replaceChildren(tr);
-        } else {
-          t.appendChild(tr);
-        }
-        funders++;
-      }
-    }
-  } catch (e) {}
-}
+// function fundingEvent(parsed, profile, ev) {
+//   try {
+//     if (
+//       verifyBitcoinSignedEvent(
+//         window.NostrTools.nip19.npubEncode(ev.pubkey),
+//         parsed[0],
+//         parsed[1]
+//       )
+//     ) {
+//       if (!addresses.get(parsed[0])) {
+//         addresses.set(parsed[0], true);
+//         let t = document.getElementById("funders");
+//         let tr = document.createElement("tr");
+//         tr.id = "table_row_" + ev.id;
+//         tr.appendChild(makeTd(funders + 1));
+//         let name =
+//           sanitize(
+//             get_username(ev.pubkey, profile) ||
+//               get_display_name(ev.pubkey, profile)
+//           ).toLowerCase() || anon_username;
+//         let link = document.createElement("a");
+//         link.href =
+//           "https://snort.social/e/" + window.NostrTools.nip19.noteEncode(ev.id);
+//         link.innerText = name;
+//         link.title =
+//           get_display_name(ev.pubkey, profile) ||
+//           get_username(ev.pubkey, profile) ||
+//           anon_display_name;
+//         let name_proof = makeTd();
+//         name_proof.appendChild(link);
+//         tr.appendChild(name_proof);
+//         let amountRow = makeTd("Fetching amount....");
+//         getBalance(parsed[0]).then((result) => {
+//           if (result) {
+//             amountRow.innerText = result.toLocaleString() + " sats";
+//             totalFunding += result;
+//             if (document.getElementById("total_funding_row")) {
+//               document.getElementById("total_funding_row").remove();
+//             }
+//             let tr_total = document.createElement("tr");
+//             tr_total.id = "total_funding_row";
+//             tr_total.append(
+//               makeTd(),
+//               makeTd("TOTAL"),
+//               makeTd(totalFunding.toLocaleString() + " sats")
+//             );
+//             t.appendChild(tr_total);
+//           }
+//           if (!result) {
+//             if (result === 0) {
+//               document.getElementById("table_row_" + ev.id).remove();
+//               funders--;
+//             }
+//           }
+//         });
+//         tr.appendChild(amountRow);
+//         if (funders < 0) {
+//           t.replaceChildren(tr);
+//         } else {
+//           t.appendChild(tr);
+//         }
+//         funders++;
+//       }
+//     }
+//   } catch (e) {}
+// }
 
 function makeTd(inner) {
   theadh = document.createElement("td");
