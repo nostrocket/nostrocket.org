@@ -24,6 +24,7 @@
     <script src="markdown.js"></script>
     <script src="bitcoinjs-lib.js"></script>
     <script src="bitcoinjs-message.js"></script>
+    <script src="language.js"></script>
     <script src="verifyBitcoinSignedMessage.js"></script>
     <script src="https://unpkg.com/nostr-tools/lib/nostr.bundle.js"></script>
     <link rel="stylesheet" href="clock.css">
@@ -69,11 +70,15 @@
             .then((data) => {
                 document.getElementById("l").replaceChildren(makeItHTML(data))
             })</script>
+        <select id="lang">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+        </select>
     </div>
 </div>
 <div style="background-color: rgb(22,0,64);padding-top: 14px;"><div class="container">
     <div id="w"></div>
-    <script>fetch('summary.md')
+    <script>fetch(getLang()+'summary.md')
         .then(response => response.text())
         .then((data) => {
             document.getElementById("w").replaceChildren(makeItHTML(data))
