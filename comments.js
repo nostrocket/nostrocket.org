@@ -271,7 +271,7 @@ function joinOrderEvent(parsed, profile, ev) {
           ).toLowerCase() || anon_username;
         let link = document.createElement("a");
         link.href =
-          "https://snort.social/e/" + window.NostrTools.nip19.noteEncode(ev.id);
+          "https://nostr.band/?q=" + window.NostrTools.nip19.npubEncode(ev.pubkey);
         link.innerText = name;
         link.title =
           get_display_name(ev.pubkey, profile) ||
