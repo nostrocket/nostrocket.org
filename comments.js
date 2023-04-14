@@ -121,13 +121,16 @@ function render_event(model, ev, display = true) {
     name: anon_username,
     display_name: anon_display_name,
   };
-  let parsed = verifyBitcoinAddress(ev);
+  // let parsed = verifyBitcoinAddress(ev);
+  let parsed = false;
   if (parsed) {
-    //fundingEvent(parsed, profile, ev);
+    console.log("s")
+    // joinOrderEvent(parsed, profile, ev);
   } else if (
     ev.created_at > 1678191250 &&
     ev.id !== "04ca02a37b216047eb1501bdd62f9c1a568f0c84940fc9f361cb299e74ade325"
   ) {
+    joinOrderEvent(parsed, profile, ev);
     const delta = time_delta(new Date().getTime(), ev.created_at * 1000);
     if (ev.id in groupedEvents && groupedEvents[ev.id] != "") {
       console.log("1");
@@ -246,7 +249,72 @@ function get_user_div(ev, profile) {
 var funders = -1;
 var addresses = new Map();
 var totalFunding = 0;
+var npubList = [];
 
+
+function joinOrderEvent(parsed, profile, ev) {
+  try {
+        if (npubList.indexOf(ev.pubkey)!=-1){
+
+          return
+        } 
+        else{
+        npubList.push(ev.pubkey)
+        let t = document.getElementById("funders");
+        let tr = document.createElement("tr");
+        tr.id = "table_row_" + ev.id;
+        tr.appendChild(makeTd(funders + 1));
+        let name =
+          sanitize(
+            get_username(ev.pubkey, profile) ||
+              get_display_name(ev.pubkey, profile)
+          ).toLowerCase() || anon_username;
+        let link = document.createElement("a");
+        link.href =
+          "https://snort.social/e/" + window.NostrTools.nip19.noteEncode(ev.id);
+        link.innerText = name;
+        link.title =
+          get_display_name(ev.pubkey, profile) ||
+          get_username(ev.pubkey, profile) ||
+          anon_display_name;
+        let name_proof = makeTd();
+        name_proof.appendChild(link);
+        tr.appendChild(name_proof);
+        // let amountRow = makeTd("Fetching ....");
+        // getBalance(parsed[0]).then((result) => {
+        //   if (result) {
+        //     amountRow.innerText = result.toLocaleString() + " sats";
+        //     totalFunding += result;
+        //     if (document.getElementById("total_funding_row")) {
+        //       document.getElementById("total_funding_row").remove();
+        //     }
+        //     let tr_total = document.createElement("tr");
+        //     tr_total.id = "total_funding_row";
+        //     tr_total.append(
+        //       makeTd(),
+        //       makeTd("TOTAL"),
+        //       makeTd(totalFunding.toLocaleString() + " sats")
+        //     );
+        //     t.appendChild(tr_total);
+        //   }
+        //   if (!result) {
+        //     if (result === 0) {
+        //       document.getElementById("table_row_" + ev.id).remove();
+        //       funders--;
+        //     }
+        //   }
+        // });
+        // tr.appendChild(amountRow);
+        if (funders < 0) {
+          t.replaceChildren(tr);
+        } else {
+          t.appendChild(tr);
+        }
+        funders++;
+      }
+    }
+   catch (e) {}
+}
 // function fundingEvent(parsed, profile, ev) {
 //   try {
 //     if (
