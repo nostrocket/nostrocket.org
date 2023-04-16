@@ -58,9 +58,8 @@
 <!--                </div>-->
 <!--            </div>-->
 <!--        </div>-->
+</div>
 
-
-    </div>
 </header>
 <div class="headlinks" style="background-color: rgb(2,10,42, 0.4);">
     <div class="container">
@@ -85,17 +84,35 @@
         })</script>
 </div></div>
 
-<div style="background-color: rgb(93,2,110); padding-top: 14px;"><div class="container">
-    <div id="x"></div>
-    <script>fetch('wtf.md')
-        .then(response => response.text())
-        .then((data) => {
-            document.getElementById("x").replaceChildren(makeItHTML(data))
-        })</script>
+<!--<div style="background-color: rgb(93,2,110); padding-top: 14px;"><div class="container">-->
+<!--    <div id="x"></div>-->
+<!--    <script>fetch('wtf.md')-->
+<!--        .then(response => response.text())-->
+<!--        .then((data) => {-->
+<!--            document.getElementById("x").replaceChildren(makeItHTML(data))-->
+<!--        })</script>-->
+<!--</div></div>-->
+<div style="background-color: rgb(76,0,112); padding-top: 14px;"><div class="container">
+    <h1>Nostr HK Members</h1>
+    <table>
+        <thead>
+        <tr>
+            <th style="text-align: left">#</th>
+            <th style="text-align: left">name</th>
+            <!-- <th style="text-align: left">amount</th> -->
+        </tr>
+        </thead>
+        <tbody id="funders">
+        <td>0</td>
+        <td>Fetching, please wait</td>
+        <td></td>
+        <td></td>
+        </tbody>
+    </table>
+    <div class="images-center">Reply in this thread to join Nostr HK: note134slxdr2np6ml5f459me8cfmzg6cgw46c2agv55mtq55mtdtcgaqu4af4l</div>
 </div></div>
 
-
-<div style="background-color: rgb(119,2,30)"><div class="container">
+<div style="background-color: rgb(93,2,110)"><div class="container">
     <div id="y"></div>
     <script>fetch('getstarted.md')
         .then(response => response.text())
@@ -105,7 +122,7 @@
 </div></div>
 
 
-<div style="background-color: rgb(119,2,30)">
+<div style="background-color: rgb(93,2,110)">
     <div class="container">
     <div id="comments"></div>
     <script src="nostr.js"></script>

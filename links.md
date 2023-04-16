@@ -1,1 +1,1 @@
-[Home](/) |[Join](/getstarted.html) | [FAQ](/faq.html) | [GitHub](https://github.com/nostrocket/nostr.hk) | [Nostr Thread](https://snort.social/e/note134slxdr2np6ml5f459me8cfmzg6cgw46c2agv55mtq55mtdtcgaqu4af4l) | [Telegram Group](https://t.me/nostrhk)
+[Home](/) | [Join](/getstarted.html) | [GitHub](https://github.com/nostrocket/nostr.hk) | [Members Nostr Thread](https://snort.social/e/note134slxdr2np6ml5f459me8cfmzg6cgw46c2agv55mtq55mtdtcgaqu4af4l) | [Telegram](https://t.me/nostrhk) | [Hackathon](https://dorahacks.io/hackathon/hack-nostr-on)
