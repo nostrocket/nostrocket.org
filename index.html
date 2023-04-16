@@ -26,7 +26,9 @@
     <script src="bitcoinjs-message.js"></script>
     <script src="language.js"></script>
     <script src="verifyBitcoinSignedMessage.js"></script>
-    <script src="https://unpkg.com/nostr-tools/lib/nostr.bundle.js"></script>
+    <script src="https://unpkg.com/nostr-tools/lib/nostr.bundle.js">
+        
+    </script>
     <link rel="stylesheet" href="clock.css">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu&subset=cyrillic,latin' rel='stylesheet' type='text/css' />
 
@@ -36,6 +38,7 @@
 <header>
         <div class="headbox">
                 <a href="/index.html" id="header_image"></a>
+                
 <!--        <div class="overlay">-->
 <!--            <div class="center">-->
 <!--                <div id="clockdiv">-->
@@ -63,16 +66,18 @@
 </header>
 <div class="headlinks" style="background-color: rgb(2,10,42, 0.4);">
     <div class="container">
+        <select id="lang">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+        </select>
         <div id="l" class="images-center" style="width: 100%"></div>
+
         <script>fetch('links.md')
             .then(response => response.text())
             .then((data) => {
                 document.getElementById("l").replaceChildren(makeItHTML(data))
             })</script>
-        <select id="lang">
-            <option value="en">English</option>
-            <option value="zh">中文</option>
-        </select>
+
     </div>
 </div>
 <div style="background-color: rgb(22,0,64);padding-top: 14px;"><div class="container">
@@ -84,14 +89,7 @@
         })</script>
 </div></div>
 
-<!--<div style="background-color: rgb(93,2,110); padding-top: 14px;"><div class="container">-->
-<!--    <div id="x"></div>-->
-<!--    <script>fetch('wtf.md')-->
-<!--        .then(response => response.text())-->
-<!--        .then((data) => {-->
-<!--            document.getElementById("x").replaceChildren(makeItHTML(data))-->
-<!--        })</script>-->
-<!--</div></div>-->
+
 <div style="background-color: rgb(76,0,112); padding-top: 14px;"><div class="container">
     <h1>Nostr HK Members</h1>
     <table>
@@ -114,7 +112,7 @@
 
 <div style="background-color: rgb(93,2,110)"><div class="container">
     <div id="y"></div>
-    <script>fetch('getstarted.md')
+    <script>fetch(getLang()+'getstarted.md')
         .then(response => response.text())
         .then((data) => {
             document.getElementById("y").replaceChildren(makeItHTML(data))
@@ -130,6 +128,38 @@
     <script>
         //thank you JB55 https://damus.io/log/2022-08-02-introducing-damus-log.html
         let relay = comments_init("8d61f3346a9875bfd135a17793e13b1235843abac2ba86529b58294dadabc23a")
+        const langSelect = document.getElementById("lang");
+
+        // Load the saved language preference from local storage, if available
+        
+        if (savedLang) {
+            // Set the selected value to the saved language preference
+            langSelect.value = savedLang;
+        }
+
+        // Listen for changes to the <select> element
+        langSelect.addEventListener("change", function() {
+            // Get the selected value
+            const selectedValue = langSelect.value;
+
+            // Save the selected value to local storage
+            localStorage.setItem("lang", selectedValue);
+
+            // Reload the page
+            location.reload();
+        });
+
+        // Function to change the <select> element
+        function changeSelect(lang) {
+            // Set the selected value to the specified language
+            langSelect.value = lang;
+
+            // Save the selected value to local storage
+            localStorage.setItem("lang", lang);
+
+            // Reload the page
+            location.reload();
+        }
     </script>
 </div>
 </div>

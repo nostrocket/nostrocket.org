@@ -1,4 +1,5 @@
+const savedLang = localStorage.getItem("lang") || "en";
 function getLang(){
-    var myselect=document.getElementById("lang")
-    return 'language/'+myselect.options[myselect.selectedIndex].value+'/'
+   
+    return 'language/'+savedLang+'/'
 }

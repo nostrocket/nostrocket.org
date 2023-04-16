@@ -256,6 +256,16 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
+.select {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 2%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .center {
     display: flex;
