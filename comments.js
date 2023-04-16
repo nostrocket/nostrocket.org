@@ -10,7 +10,7 @@ function uuidv4() {
 
 async function comments_init(thread)
 {
-  const relay = await Relay("wss://relay.damus.io")
+  const relay = await Relay("wss://universe.nostrich.land/?lang=zh")
   const now = (new Date().getTime()) / 1000
   const model = {events: [], profiles: {},treeEvents:[]}
   const comments_id = uuidv4()
