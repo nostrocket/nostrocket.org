@@ -206,7 +206,7 @@ hr {
 }
 
 .btn .icon {
-    display: inline-block;
+    /* display: inline-block; */
     width: 16px;
     height: 16px;
     margin: 1px 8px 0 0;
@@ -268,9 +268,8 @@ a {
     z-index: 11;
     width: 100%;
     aspect-ratio: 1393/484;
-    //height: ;
     background-image: url("/images/nostrocket_wide.png");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
