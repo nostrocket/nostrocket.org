@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#151515">
+    <meta name="msapplication-navbutton-color" content="#151515">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Nostrocket! | a hyper-efficient rocket booster for your project</title>
+    <meta property="og:title" content="Nostrocket!"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta name="description" content="a hyper-efficient rocket booster for your project"/>
+    <meta property="og:description" content="a hyper-efficient rocket booster for your project"/>
+    <link rel="canonical" href="https://nostrocket.org/"/>
+    <meta property="og:url" content="https://nostrocket.org/"/>
+    <meta property="og:site_name" content="Nostrocket!"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta property="twitter:title" content="Nostrocket!"/>
+    <link rel="stylesheet" href="comments.css">
+    <script src="showdown.min.js"></script>
+    <script src="markdown.js"></script>
+    <script src="bitcoinjs-lib.js"></script>
+    <script src="bitcoinjs-message.js"></script>
+    <script src="verifyBitcoinSignedMessage.js"></script>
+    <script src="https://unpkg.com/nostr-tools/lib/nostr.bundle.js"></script>
+    <link rel="stylesheet" href="clock.css">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu&subset=cyrillic,latin' rel='stylesheet' type='text/css' />
+
+</head>
+
+<body>
+<header>
+        <div class="headbox">
+                <a href="/index.html" id="header_image"></a>
+        <div class="overlay">
+            <div class="center">
+               
+            </div>
+        </div>
+
+
+
+    </div>
+</header>
+<div class="headlinks" style="background-color: rgb(2,10,42, 0.4);">
+    <div class="container">
+        <div id="l" class="images-center" style="width: 100%"></div>
+        <script>fetch('/links.md')
+            .then(response => response.text())
+            .then((data) => {
+                document.getElementById("l").replaceChildren(makeItHTML(data))
+            })</script>
+    </div>
+</div>
+<div style="background-color: rgb(22,0,64);padding-top: 14px;"><div class="container">
+    <div id="w"></div>
+    <script>fetch('lang/zh/summary.md')
+        .then(response => response.text())
+        .then((data) => {
+            document.getElementById("w").replaceChildren(makeItHTML(data))
+        })</script>
+    <div class="images-center" style="padding-top: 24px;">
+        <img src="images/rocket.png" style="width: 23%;margin-right: 2%"/><img src="images/equals.png" style="width: 12%;height:12%;margin-right: 3%;margin-top: auto;margin-bottom: auto;"/><img src="images/nostr.png" style="width: 23%;margin-right: 2%"/><img src="images/plus.png" style="width: 12%;height:12%;margin-right: 3%;margin-top: auto;margin-bottom: auto;"/><img src="images/btc.png" style="width: 23%;"/>
+    </div>
+    <div style="display: flex;justify-content: center;padding-bottom: 20px;color: #fa7a0b;">Built with Nostr and Bitcoin</div>
+</div></div>
+
+
+<div style="background-color: rgb(76,0,112); padding-top: 14px;"><div class="container">
+    <h2 id="funding-queue">资金队列</h2>
+    <p>这些朋友有意向向subrockets投资并且已经公布了一个比特币签名的信息来 <a href="/verify.html">证明</a> 他们有如下准备好参与投资的聪</p>
+    <table>
+        <thead>
+        <tr>
+            <th style="text-align: left">#</th>
+            <th style="text-align: left">name</th>
+            <th style="text-align: left">amount</th>
+        </tr>
+        </thead>
+        <tbody id="funders">
+        <td>0</td>
+        <td>Fetching, please wait</td>
+        <td></td>
+        <td></td>
+        </tbody>
+    </table>
+    <div class="images-center"><a href="/funding.html">Join the waitlist now</a></div>
+</div></div>
+
+
+<div style="background-color: rgb(93,2,110); padding-top: 14px;"><div class="container">
+    <div id="x"></div>
+    <script>fetch('/lang/zh/wtf.md')
+        .then(response => response.text())
+        .then((data) => {
+            document.getElementById("x").replaceChildren(makeItHTML(data))
+        })</script>
+</div></div>
+
+
+<div style="background-color: rgb(119,2,30)"><div class="container">
+    <div id="y"></div>
+    <script>fetch('lang/zh/getstarted.md')
+        .then(response => response.text())
+        .then((data) => {
+            document.getElementById("y").replaceChildren(makeItHTML(data))
+        })</script>
+</div></div>
+
+
+<div style="background-color: rgb(119,2,30)">
+    <div class="container">
+    <div id="comments"></div>
+    <script src="nostr.js"></script>
+    <script src="comments.js"></script>
+    <script>
+        //thank you JB55 https://damus.io/log/2022-08-02-introducing-damus-log.html
+        let relay = comments_init("503941a9939a4337d9aef7b92323c353441cb5ebe79f13fed77aeac615116354")
+    </script>
+</div>
+</div>
+
+<script src="countdown.js"></script>
+</body>
+</html>
