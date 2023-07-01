@@ -260,6 +260,10 @@ a {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    border-style: solid;
+    border-width: thick;
+    border-color: #fa7a0b;
+    background-color: rgba(36, 4, 94, 0.56);
 }
 
 #header_image {
